@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between bg-gray-900 text-white py-4 px-6">
+    <nav className="flex items-center justify-between font-roboto bg-gray-900 text-white py-4 px-6">
       <div className="flex items-center">
         <Link to="/" className="text-2xl font-bold text-white">CSM</Link>
       </div>
@@ -20,10 +20,10 @@ function Navbar() {
             <Link to="/" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Inicio</Link>
           </li>
           <li>
-            <Link to="/aulas" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Aulas</Link>
+            <Link to="/aulas" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Desenvolvimento</Link>
           </li>
           <li>
-            <Link to="/voluntariado" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Voluntariado</Link>
+            <Link to="/voluntariado" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Engajamento Comunitário</Link>
           </li>
           <li className="relative">
             <button className=" text-white hover:text-gray-900 hover:bg-blue-300 px-4 rounded-xl hvr-grow" onClick={toggleDropdown}>
@@ -33,7 +33,7 @@ function Navbar() {
             {dropdownOpen && (
               <ul className="absolute top-12 left-0 w-auto bg-white text-gray-900 py-0 px-0 rounded-xl shadow-lg text-center">
                 <li>
-                  <Link to="/juridico" className="block px-6 py-2 hover:bg-blue-300 rounded-t-xl rounded-b-none">Juridico</Link>
+                  <Link to="/juridico" className="block px-6 py-2 hover:bg-blue-300 rounded-t-xl rounded-b-none">Juridica</Link>
                 </li>
                 <li>
                   <Link to="/psico-social" className="block px-6 py-2 hover:bg-blue-300 rounded-b-xl">Psicosocial</Link>
