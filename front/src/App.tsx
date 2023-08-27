@@ -1,21 +1,23 @@
 import './App.css'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Card from './components/Card';
-import Aulas from './components/Aulas';
+import Desenvolvimento from './pages/desenvolvimento/Desenvolvimento';
+import Landing from './pages/landing/Landing';
+import Voluntariado from './pages/voluntariado/Voluntariado';
+import Juridico from './pages/juridico/Juridico';
+
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Aulas />
-{/*   <Route path="/aulas" Component={Aulas} />
-      <Route path="/voluntariado" Component={Voluntariado} />
-      <Route path="/inicio" Component={Inicio} />
-      <Route path="/juridico" Component={Juridico} />
-      <Route path="/psico-social" Component={PsicoSocial} />
-      <Route path="/usuario" Component={Usuario} /> */}
+      <Routes>
+        <Route path='/' Component={Landing}/>
+        <Route path='/desenvolvimento' Component={Desenvolvimento}/>
+        <Route path="/voluntariado" Component ={Voluntariado}/>
+        <Route path="/proteção/juridica" Component={Juridico}/>
+      </Routes>
       <Footer />
     </Router>
   );
