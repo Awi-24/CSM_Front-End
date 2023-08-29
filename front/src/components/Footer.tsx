@@ -11,7 +11,7 @@ function Footer() {
         <a href="#" className="hover:text-blue-300">
           Suporte
         </a>
-        <a href="#" className="hover:text-blue-300">
+        <a href="https://www.gov.br/mds/pt-br/acesso-a-informacao/lgpd" target="_blank" className="hover:text-blue-300">
           LGPD
         </a>
       </div>

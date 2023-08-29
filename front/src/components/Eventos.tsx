@@ -1,3 +1,7 @@
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 export interface EventoProps {
   image: string;
   title: string;
@@ -6,7 +10,7 @@ export interface EventoProps {
 
 const Eventos: React.FC<EventoProps> = ({ image, title, text }) => {
   return (
-    <div className="w-3/4 h-3/5 bg-white rounded-xl shadow relative overflow-hidden border">
+    <div className="w-full h-full bg-white rounded-xl shadow relative overflow-hidden border">
       <div className="absolute bottom-0 left-0 w-full rounded-none bg-gradient-to-t from-black to-transparent p-4">
         <h1 className="text-white font-medium font-roboto text-2xl sm:text-4xl md:text-5xl -mt-6 sm:-mt-8 md:-mt-10">
           {title || "Nome Evento"}
@@ -19,10 +23,56 @@ const Eventos: React.FC<EventoProps> = ({ image, title, text }) => {
         className="h-full bg-cover bg-center"
         style={{ backgroundImage: `url(${image || 'https://img.freepik.com/fotos-gratis/uma-pintura-de-um-lago-de-montanha-com-uma-montanha-ao-fundo_188544-9126.jpg?w=2000'})` }}
       >
-
       </div>
     </div>
   );
 };
 
-export default Eventos;
+function Landing() {
+  const eventosData: EventoProps[] = [
+    {
+      image: "URL_DA_IMAGEM_1",
+      title: "Título do Evento 1",
+      text: "Descrição do Evento 1",
+    },
+    {
+      image: "URL_DA_IMAGEM_2",
+      title: "Título do Evento 2",
+      text: "Descrição do Evento 2",
+    },
+    {
+      image: "URL_DA_IMAGEM_3",
+      title: "Título do Evento 3",
+      text: "Descrição do Evento 3",
+    },
+  ];
+
+  return (
+    <div className="bg-landing w-full bg-cover">
+      <div className="flex flex-col justify-center items-center h-screen -mt-10">
+        {/* Carrossel de eventos */}
+        <Carousel
+          showThumbs={false}
+          infiniteLoop={true}
+          emulateTouch={true}
+          showStatus={false}
+          autoPlay={true}
+          interval={5000}
+        >
+          {eventosData.map((evento, index) => (
+            <div key={index}>
+              <Eventos
+                image={evento.image}
+                title={evento.title}
+                text={evento.text}
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+      {/* ... (resto do seu código) ... */}
+    </div>
+  );
+}
+
+export default Landing;

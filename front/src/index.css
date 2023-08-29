@@ -21,3 +21,23 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+/* No seu arquivo de estilo global ou componente específico */
+::-webkit-scrollbar {
+  width:0px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1351FF; /* Cor da thumb (parte que você pode arrastar) */
+  border-radius: 3px; /* Borda arredondada da thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0c39cc; /* Cor da thumb quando o cursor passa por cima */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f7fafc; /* Cor do track (área onde a thumb se move) */
+  border-radius: 3px; /* Borda arredondada do track */
+}
+
