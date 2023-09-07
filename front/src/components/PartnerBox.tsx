@@ -12,17 +12,17 @@ const PartnerBox: React.FC<PartnerBoxProps> = ({ icon, title, text, link }) => {
   return (
     <Link
       to={link}
-      className="w-64 bg-white rounded-lg p-4 m-4 text-center font-roboto shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
+      className="w-72 bg-white flex flex-col justify-center items-center rounded-lg m-4 text-center font-roboto shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
     >
       <div className="mb-4">
         <img
           src={icon || "https://via.placeholder.com/300"}
           alt="Ícone"
-          className=""
+          className="overflow-clip rounded-t-lg"
         />
       </div>
       <h2 className="font-semibold mb-2 text-xl">{title || "Titulo"}</h2>
-      <p className="text-gray-700 text-sm">
+      <p className="text-gray-700 p-4 text-sm">
         {text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed enim nisl. Textozinho finalzinho. "}
       </p>
     </Link>

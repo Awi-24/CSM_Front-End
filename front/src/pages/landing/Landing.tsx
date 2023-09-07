@@ -1,89 +1,86 @@
-import BoxCard from "../../components/BoxCard";
+import CardBox from "../../components/CardBox";
 import PartnerBox from "../../components/PartnerBox";
+import Presentation from "../../components/Presentation";
 
 function Landing() {
   return (
-    <div className="bg-landing w-full bg-cover">
-      {/*Carrossel de eventos*/}
-      <div></div>
-      {/*APRESENTAÇÃO*/}
-      <div className="flex-col flex align-middle items-center">
-        <div className="text-white align-middle w-7/12 p-16">
-          <h1 className="text-5xl font-medium text-center font-roboto">
-            Centro de Serviços ao Migrante
-          </h1>
-          <h3 className="font-roboto text-lg font-regular mt-16 mb-28">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </h3>
+    <div className="bg-landing w-full">
+      {/* Max/Min Width*/}
+      <div className="">
+        {/*Carrossel*/}
+        <div></div>
+        {/*About Us*/}
+        <div className="flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5">
+          <Presentation title={"Centro de Serviços ao Migrante"} text={""} />
         </div>
-        {/*BLOCO*/}
-        <div className="flex flex-col items-center bg-white w-full p-20 mt-20">
-          {/*CAIXAS MAIOR*/}
-          <div className="flex flex-col relative -m-64 items-center justify-center  mb-10 bg-blue-200  rounded-xl shadow-md shadow-black-50">
-            <div className=" grid grid-cols-2 gap-6 p-4">
-              <BoxCard icon={""} title={""} text={""} link={""} />
-              <BoxCard icon={""} title={""} text={""} link={""} />
-              <BoxCard icon={""} title={""} text={""} link={""} />
-              <BoxCard icon={""} title={""} text={""} link={""} />
+        {/*Box with cards*/}
+        <div className="flex flex-row justify-center align-middle items-center p-10 w-full bg-abrupt-gradient">
+          <div className="bg-blue-200 w-4/6 rounded-md xs:w-full sm:w-full md:w-fit">
+            <div className="flex flex-col justify-center sm:flex-row sm:justify-between sm:items-center">
+              <CardBox icon={""} title={""} text={""} link={""} />
+              <CardBox icon={""} title={""} text={""} link={""} />
+            </div>
+            <div className="flex flex-col justify-around sm:flex-row sm:justify-start sm:items-center">
+              <CardBox icon={""} title={""} text={""} link={""} />
+              <CardBox icon={""} title={""} text={""} link={""} />
             </div>
           </div>
         </div>
-      </div>
-      {/*Mapeamento*/}
-      <div className="flex flex-col items-center bg-white -mt-16">
-        <h1 className="font-roboto text-gray-900 text-4xl font-medium text-center mb-10">
-          Mapeamento
-        </h1>
-        <div className="flex flex-row justify-between w-9/12 mb-16">
-          <div className="bg-black w-[32rem] h-72 rounded-lg m-auto">.</div>
-          <h2 className="font-roboto text-gray-900 w-2/6 m-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            sed enim nisl. In hac habitasse platea dictumst. Maecenas accumsan a
-            odio et maximus. Mauris feugiat eros quis metus aliquam finibus.
-            Vivamus neque neque, imperdiet sit amet condimentum nec, consectetur
-            sagittis diam. Ut facilisis dignissim justo, non iaculis felis
-            malesuada in. Donec placerat purus ut lacus eleifend laoreet. Donec
-            at lorem erat.
-          </h2>
-        </div>
-        <h2 className="flex flex-row justify-center font-roboto mb-10 -mt-10 text-gray-900 w-full m-auto">
-          *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed
-          enim nisl.
-        </h2>
-      </div>
-
-      {/*PARCERIAS */}
-      <div className="h-screen w-full text-center flex flex-col justify-center items-center">
-        <h1 className="font-roboto font-medium text-5xl text-center m-10 text-white">
-          Parcerias
-        </h1>
-        <h5 className="font-roboto text-lg font-regular w-7/12 text-white p-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed
-          enim nisl. In hac habitasse platea dictumst. Maecenas accumsan a odio
-          et maximus. Mauris feugiat eros quis metus aliquam finibus. Vivamus
-          neque neque, imperdiet sit amet condimentum nec, consectetur sagittis
-          diam. Ut facilisis dignissim justo, non iaculis felis malesuada in.
-          Donec placerat purus ut lacus eleifend laoreet.
-        </h5>
-        <div className="flex flex-row justify-center mt-6">
-          <PartnerBox icon={""} title={"CATED"} text={""} link={""} />
-          <PartnerBox icon={""} title={"UNIFACS"} text={""} link={""} />
-          <PartnerBox icon={""} title={"ACNUR"} text={""} link={""} />
-        </div>
-      </div>
-      <div className="w-full flex-col">
-        <form action="">
-          <div className="flex flex-row md:flex-col">
-            <div>col 1</div>
-            <div>col 2</div>
+        {/*Mapping*/}
+        <div className="flex flex-row justify-center bg-white py-10 md:py-10 xs:px-1 md:px-5">
+          <div className="text-center w-5/6 md:w-4/6 ">
+            <h1 className="font-roboto font-medium text-gray-900 text-4xl md:text-5xl mb-10 text-center">
+              Mapeamento
+            </h1>
+            <p className="font-roboto font-normal text-gray-900 text-lg w-fit text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
+              blandit, a lacinia ex dignissim. Fusce cursus quam eget sem
+              laoreet, non feugiat dui vestibulum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
+              blandit, a lacinia ex dignissim. Fusce cursus quam eget sem
+              laoreet, non feugiat dui vestibulum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
+              blandit, a lacinia ex dignissim.
+            </p>
           </div>
-        </form>
+        </div>
+        {/*Parcerias*/}
+        <div className="flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5">
+          <div className="flex flex-col w-5/6 justify-center">
+            <h1 className="font-roboto font-medium text-white text-4xl md:text-5xl mb-10 text-center">
+              Parcerias
+            </h1>
+            <div className="flex flex-col items-center md:flex-row justify-center xs:w-full sm:w-full">
+              <PartnerBox icon={""} title={"ACNUR"} text={""} link={""} />
+              <PartnerBox icon={""} title={"UNIFACS"} text={""} link={""} />
+              <PartnerBox icon={""} title={"CATED"} text={""} link={""} />
+            </div>
+          </div>
+        </div>
+        {/*Fale Conosco*/}
+        <div className="flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-white">
+          <div className="flex flex-col xs:w-5/6 md:w-4/6 justify-center">
+            <h1 className="font-roboto font-medium text-gray-900 text-4xl md:text-5xl mb-10 text-center">
+                Fale Conosco
+            </h1>
+            <div className="flex flex-row md:flex-row justify-center items-center">
+              <div className="flex flex-col">
+                <div className="flex flex-row justify-between items-center align-middle">
+                  <input type="text" name="Nome" placeholder="Nome" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+                  <input type="text" name="Sobrenome" placeholder="Sobrenome" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+                </div>
+                <input type="email" name="Email" placeholder="E-mail" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+                <input type="tel" name="Telefone" placeholder="Telefone (Opcional)" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+              </div>
+              <div className="flow flow-col">
+                <input type="text" name="Mensagem" placeholder="Mensagem" className="m-2 h-40 w-96 text rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

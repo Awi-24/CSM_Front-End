@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': '480px',     // Extra small devices
-        'sm': '640px',     // Small devices
+        'xs': '320px',     // Extra small devices
+        'sm': '576px',     // Small devices
         'md': '768px',     // Medium devices
         'lg': '1024px',    // Large devices
         'xl': '1280px',    // Extra large devices
@@ -17,6 +17,9 @@ export default {
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
+      },
+      backgroundImage: {
+        'abrupt-gradient': 'linear-gradient(to bottom, #0D297A 50%, white 50%)',
       },
     },
   },
