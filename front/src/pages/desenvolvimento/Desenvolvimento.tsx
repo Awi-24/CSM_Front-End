@@ -32,7 +32,7 @@ function Aulas() {
     <div className="grid grid-cols-2">
       {/* Coluna 1 */}
       <div className="bg-gray-200 p-4">
-        <img className="w-full object-center" src={video} alt="Video???"></img>
+        {/* <img className="w-full object-center" src={video} alt="Video???"></img> */}
       </div>
 
       {/* Coluna 2 */}
