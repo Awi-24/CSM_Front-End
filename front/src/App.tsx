@@ -6,6 +6,7 @@ import Desenvolvimento from './pages/desenvolvimento/Desenvolvimento';
 import Landing from './pages/landing/Landing';
 import Voluntariado from './pages/engajamento/Engajamento';
 import Juridico from './pages/juridico/Juridico';
+import Aulas from './pages/desenvolvimento/Desenvolvimento';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/desenvolvimento' Component={Desenvolvimento}/>
         <Route path="/voluntariado" Component ={Voluntariado}/>
         <Route path="/proteção/juridica" Component={Juridico}/>
+        <Route path="/aulas" Component={Aulas}/>
       </Routes>
       <Footer />
     </Router>
