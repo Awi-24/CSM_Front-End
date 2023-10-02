@@ -1,8 +1,16 @@
+import React, { ChangeEvent, useState } from "react";
+
 import CardBox from "../../components/CardBox";
 import PartnerBox from "../../components/PartnerBox";
 import Presentation from "../../components/Presentation";
+import CustomButton from "../../components/CustomButton";
 
 function Landing() {
+
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="bg-landing w-full">
       {/* Max/Min Width*/}
@@ -17,12 +25,12 @@ function Landing() {
         <div className="flex flex-row justify-center align-middle items-center p-10 w-full bg-abrupt-gradient">
           <div className="bg-blue-200 w-4/6 rounded-md xs:w-full sm:w-full md:w-fit">
             <div className="flex flex-col justify-center sm:flex-row sm:justify-between sm:items-center">
-              <CardBox icon={""} title={""} text={""} link={""} />
-              <CardBox icon={""} title={""} text={""} link={""} />
+              <CardBox icon={""} title={"Proteção"} text={""} link={""} />
+              <CardBox icon={""} title={"Comunitário"} text={""} link={""} />
             </div>
             <div className="flex flex-col justify-around sm:flex-row sm:justify-start sm:items-center">
-              <CardBox icon={""} title={""} text={""} link={""} />
-              <CardBox icon={""} title={""} text={""} link={""} />
+              <CardBox icon={""} title={"Desenvolvimento"} text={""} link={""} />
+              <CardBox icon={""} title={"Marketing"} text={""} link={""} />
             </div>
           </div>
         </div>
@@ -36,11 +44,10 @@ function Landing() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               eleifend odio eget vestibulum. Vivamus condimentum ante in mi
               blandit, a lacinia ex dignissim. Fusce cursus quam eget sem
-              laoreet, non feugiat dui vestibulum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
-              blandit, a lacinia ex dignissim. Fusce cursus quam eget sem
-              laoreet, non feugiat dui vestibulum.
+              laoreet, non feugiat dui vestibulum. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Sed eleifend odio eget vestibulum.
+              Vivamus condimentum ante in mi blandit, a lacinia ex dignissim.
+              Fusce cursus quam eget sem laoreet, non feugiat dui vestibulum.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               eleifend odio eget vestibulum. Vivamus condimentum ante in mi
               blandit, a lacinia ex dignissim.
@@ -60,28 +67,75 @@ function Landing() {
             </div>
           </div>
         </div>
-        {/*Fale Conosco*/}
+        {/* Fale Conosco */}
         <div className="flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-white">
-          <div className="flex flex-col xs:w-5/6 md:w-4/6 justify-center">
+          <div className="flex flex-col xs:w-5/6 md:w-4/6 items-center justify-center">
             <h1 className="font-roboto font-medium text-gray-900 text-4xl md:text-5xl mb-10 text-center">
-                Fale Conosco
+              Fale Conosco
             </h1>
-            <div className="flex flex-row md:flex-row justify-center items-center">
+            <div className="flex flex-col p-4 md:flex-row justify-center items-center">
               <div className="flex flex-col">
-                <div className="flex flex-row justify-between items-center align-middle">
-                  <input type="text" name="Nome" placeholder="Nome" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
-                  <input type="text" name="Sobrenome" placeholder="Sobrenome" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+                <div className="flex flex-col xl:flex-row justify-between items-center align-middle">
+                  <input
+                    type="text"
+                    name="Nome"
+                    placeholder="Nome"
+                    className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-96}`}
+                    onChange={handleInputChange}
+                  />
+
+                  <input
+                    type="text"
+                    name="Sobrenome"
+                    placeholder="Sobrenome"
+                    className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto}`}
+                    onChange={handleInputChange}
+                  />
                 </div>
-                <input type="email" name="Email" placeholder="E-mail" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
-                <input type="tel" name="Telefone" placeholder="Telefone (Opcional)" className="m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="E-mail"
+                  maxLength={350}
+                  className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-auto md:w-auto}`}
+                  onChange={handleInputChange}
+                />
+
+                <input
+                  type="tel"
+                  name="Telefone"
+                  placeholder="Telefone (Opcional)"
+                  className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
+                  onChange={handleInputChange}
+                />
               </div>
+
               <div className="flow flow-col">
-                <input type="text" name="Mensagem" placeholder="Mensagem" className="m-2 h-40 w-96 text rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600"/>
+                <textarea
+                  name="Mensagem"
+                  placeholder="Mensagem"
+                  rows={4} // Número de linhas visíveis
+                  cols={50}
+                  className={`m-2 h-56 w-80 md:w-96 text rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600}`}
+                />
               </div>
             </div>
+            <CustomButton
+              text={
+                "Enviar"
+              }
+              buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
+              textClassName=""
+              onClick={function (): void {
+                throw new Error("Function not implemented.");
+              }}
+            />
+
           </div>
         </div>
       </div>
+
     </div>
   );
 }

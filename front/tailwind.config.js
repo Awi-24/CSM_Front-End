@@ -20,6 +20,7 @@ export default {
       },
       backgroundImage: {
         'abrupt-gradient': 'linear-gradient(to bottom, #0D297A 50%, white 50%)',
+        'bg-aulas': "url('./image-aulas.png')"
       },
     },
   },

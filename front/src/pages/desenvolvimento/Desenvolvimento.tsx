@@ -1,62 +1,68 @@
-import BoxCard from "../../components/CardBox";
-import video from "../../img/ratao.jpg"
-import fundo_topo from "../../img/Aulas_topojpeg.jpeg"
+import CustomButton from "../../components/CustomButton";
+import PartnerBox from "../../components/PartnerBox";
+import YoutubePlayer from "../../components/YoutubePlayer";
 
 function Aulas() {
-  return (
-    <>
-    {/*Topo */}
-      <div
-      className="bg-cover bg-center h-screen"
-      style={{
-        backgroundImage: `url(${fundo_topo})`, // Use a imagem importada como background
-      }}
-      >
-        <div className="mx-52 flex flex-col justify-content align-center">
+  function handleClick(): void {
+    throw new Error("Function not implemented.");
+  }
 
-      <p className="text-3xl font-bold text-white mb-6">MEIOS</p>
-      <p className="text-xl font-semibold text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, cupiditate. Dolores provident facere explicabo laborum corporis error totam fuga autem laboriosam itaque tenetur sunt ducimus, voluptas beatae ipsa, minus dignissimos!</p>
+  return (
+    <div className="bg-landing w-full">
+      <div>
+        {/** Introdução */}
+        <div className="h-screen flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-bg-aulas bg-center bg-cover bg-fixed">
+          <div className="text-start md:w-4/6">
+            <h1 className="font-roboto font-medium text-blue-300 text-4xl md:text-5xl text-start">
+              Titulo
+            </h1>
+            <p className="font-roboto font-normal text-white text-lg my-4 text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
+              blandit, a lacinia ex dignissim. Fusce cursus quam eget sem
+              laoreet, non feugiat dui vestibulum.
+            </p>
+            <CustomButton
+              text="Participe"
+              onClick={handleClick}
+              buttonClassName="bg-white font-roboto font-medium hover:bg-blue-300 hover:text-white"
+              textClassName=""
+            />
+          </div>
+        </div>
+        {/* Cards */}
+        <div className="h-fit flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5">
+          <div className="flex flex-row flex-wrap justify-center align-middle items-center">
+            <PartnerBox icon={""} title={"Turmas"} text={""} link={""} />
+            <PartnerBox icon={""} title={"Aulas"} text={""} link={""} />
+            <PartnerBox icon={""} title={"Materiais"} text={""} link={""} />
+          </div>
+        </div>
+        {/* Sobre Nós */}
+        <div className="w-full bg-white">
+          <div className="">
+            <div className="overflow-clip w-fit h-fit rounded-xl m-auto md:m-10 border-blue-700 border-2">
+              <YoutubePlayer videoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+            </div>
+            <div className="">
+              <h1 className="font-roboto font-medium text-gray-900 text-4xl md:text-5xl mb-10 text-center  md:text-start">
+                Sobre
+              </h1>
+              <p className="font-roboto font-normal text-gray-800 break-normal">
+                Lorem ipsum dolor sit amet consectetur. Erat consectetur tortor
+                mauris parturient non rutrum nisl placerat. At consectetur nunc
+                et risus ornare dictumst. Aenean id praesent lorem massa sit.
+                Pellentesque et feugiat mauris a libero augue. Lorem ipsum dolor
+                sit amet consectetur. Erat consectetur tortor mauris parturient
+                non rutrum nisl placerat. At consectetur nunc et risus ornare
+                dictumst.
+              </p>
+              <div>placeholder</div>
+            </div>
+          </div>
         </div>
       </div>
-
-
-      {/* Meio */}
-      <div className="bg-center bg-cover h-96 opacity-50 flex flex-row justify-center">
-        <BoxCard icon={""} title={"Turmas"} text={""} link={""} />
-        <BoxCard icon={""} title={"Materiais"} text={""} link={""} />
-        <BoxCard icon={""} title={"Gravações"} text={""} link={""} />
-      </div>
-
-    {/* Bottom */}
-
-    <div className="grid grid-cols-2">
-      {/* Coluna 1 */}
-      <div className="bg-gray-200 p-4">
-        {/* <img className="w-full object-center" src={video} alt="Video???"></img> */}
-      </div>
-
-      {/* Coluna 2 */}
-      <div className="bg-gray-200 p-4 flex flex-col justify-center">
-        <p className="text-2xl font-semibold text-gray-900 mb-4">SOBRE</p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias a ex asperiores reprehenderit dignissimos libero culpa quod, omnis impedit, esse obcaecati expedita quos dolore laudantium aspernatur aliquam, magnam voluptas aut!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur autem cumque mollitia. Laborum earum ipsum ut natus ex asperiores consequuntur sapiente, nulla iusto rerum dolores, molestias commodi non atque tenetur?
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis corporis ipsum recusandae eius. Deleniti obcaecati ab odit quis? Repudiandae, eveniet nobis nisi nihil beatae magni ipsum ex illum laboriosam.
-        <div className="flex mt-6">
-      {/* Campo de entrada (input) */}
-      <input
-        type="text"
-        className="p-2 border rounded-l-md outline-none w-96"
-        placeholder="Insira seu e-mail para receber informações"
-      />
-
-      {/* Botão */}
-      <button className="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600">
-        Cadastre-se
-      </button>
     </div>
-      </div>
-    </div>
-    </>
   );
 }
 
