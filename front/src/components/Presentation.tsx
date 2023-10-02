@@ -7,7 +7,7 @@ interface PresentationProps {
 
 const Presentation: FC<PresentationProps> = ({ title, text }) => {
   return (
-    <div className="text-center md:w-4/6">
+    <div className="text-center md:w-4/6  max-w-4xl">
       <h1 className="font-roboto font-medium text-white text-4xl md:text-5xl text-center">{title || "Titulo"}</h1>
       <p className="font-roboto font-normal text-white text-lg m-4 text-justify">
         {text ||

@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   return (
-    <nav className={`flex items-center justify-between font-roboto bg-gray-900 text-white py-4 px-6 transition-all duration-300 ease-in-out ${menuOpen ? 'flex-col items-center' : ''}`}>
+    <nav className={`flex items-center justify-between font-roboto bg-gray-900  text-white py-4 px-6 transition-all duration-300 ease-in-out ${menuOpen ? 'flex-col items-center' : ''}`}>
       <div className="flex items-center">
         <Link to="/" className="text-2xl font-bold text-white">CSM</Link>
       </div>

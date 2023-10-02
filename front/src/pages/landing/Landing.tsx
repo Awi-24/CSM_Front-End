@@ -25,18 +25,18 @@ function Landing() {
         <div className="flex flex-row justify-center align-middle items-center p-10 w-full bg-abrupt-gradient">
           <div className="bg-blue-200 w-4/6 rounded-md xs:w-full sm:w-full md:w-fit">
             <div className="flex flex-col justify-center sm:flex-row sm:justify-between sm:items-center">
-              <CardBox icon={""} title={"Proteção"} text={""} link={""} />
-              <CardBox icon={""} title={"Comunitário"} text={""} link={""} />
+              <CardBox icon={""} title={"Proteção"} text={"A sua unidade de atentidmento especializado, para a proteção dos seus direitos."} link={""} />
+              <CardBox icon={""} title={"Comunidade"} text={"Área dedicada a incentivar a participação em nossos eventos, aulas e workshops."} link={""} />
             </div>
             <div className="flex flex-col justify-around sm:flex-row sm:justify-start sm:items-center">
-              <CardBox icon={""} title={"Desenvolvimento"} text={""} link={""} />
-              <CardBox icon={""} title={"Marketing"} text={""} link={""} />
+              <CardBox icon={""} title={"Desenvolvimento"} text={"Sua rede de desenvolvimento pessoal e profissional dentro da nossa organização."} link={""} />
+              <CardBox icon={""} title={"Marketing"} text={"Área dedicada a divulgação e promocção de nossos eventos, aulas, ações, campanhas, etc. "} link={""} />
             </div>
           </div>
         </div>
         {/*Mapping*/}
         <div className="flex flex-row justify-center bg-white py-10 md:py-10 xs:px-1 md:px-5">
-          <div className="text-center w-5/6 md:w-4/6 ">
+          <div className="text-center w-5/6 md:w-4/6 max-w-4xl">
             <h1 className="font-roboto font-medium text-gray-900 text-4xl md:text-5xl mb-10 text-center">
               Mapeamento
             </h1>
@@ -75,7 +75,7 @@ function Landing() {
             </h1>
             <div className="flex flex-col p-4 md:flex-row justify-center items-center">
               <div className="flex flex-col">
-                <div className="flex flex-col xl:flex-row justify-between items-center align-middle">
+                <div className="flex flex-col xl:flex-row justify-between items-center align-middle max-w-lg">
                   <input
                     type="text"
                     name="Nome"
@@ -117,7 +117,7 @@ function Landing() {
                   placeholder="Mensagem"
                   rows={4} // Número de linhas visíveis
                   cols={50}
-                  className={`m-2 h-56 w-80 md:w-96 text rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600}`}
+                  className={`m-2 h-44 w-80 md:w-96 text rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600}`}
                 />
               </div>
             </div>
