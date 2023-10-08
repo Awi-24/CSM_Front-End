@@ -25,12 +25,12 @@ function Landing() {
         <div className="flex flex-row justify-center align-middle items-center p-10 w-full bg-abrupt-gradient">
           <div className="bg-blue-200 w-4/6 rounded-md xs:w-full sm:w-full md:w-fit">
             <div className="flex flex-col justify-center sm:flex-row sm:justify-between sm:items-center">
-              <CardBox icon={"./umbrella-solid.svg"} title={"Proteção"} text={"A sua unidade de atentidmento especializado, para a proteção dos seus direitos."} link={""} />
-              <CardBox icon={"./people-group-solid.svg"} title={"Comunidade"} text={"Área dedicada a incentivar a participação em nossos eventos, aulas e workshops."} link={""} />
+              <CardBox icon={"./svg/umbrella-solid.svg"} title={"Proteção"} text={"A sua unidade de atentidmento especializado, para a proteção dos seus direitos."} link={""} />
+              <CardBox icon={"./svg/people-group-solid.svg"} title={"Comunidade"} text={"Área dedicada a incentivar a participação em nossos eventos, aulas e workshops."} link={""} />
             </div>
             <div className="flex flex-col justify-around sm:flex-row sm:justify-start sm:items-center">
-              <CardBox icon={"./heart-solid.svg"} title={"Desenvolvimento"} text={"Sua rede de desenvolvimento pessoal e profissional dentro da nossa organização."} link={""} />
-              <CardBox icon={"./bullhorn-solid.svg"} title={"Marketing"} text={"Área dedicada a divulgação e promocção de nossos eventos, aulas, ações, campanhas, etc. "} link={""} />
+              <CardBox icon={"./svg/heart-solid.svg"} title={"Desenvolvimento"} text={"Sua rede de desenvolvimento pessoal e profissional dentro da nossa organização."} link={""} />
+              <CardBox icon={"./svg/bullhorn-solid.svg"} title={"Marketing"} text={"Área dedicada a divulgação e promocção de nossos eventos, aulas, ações, campanhas, etc. "} link={""} />
             </div>
           </div>
         </div>

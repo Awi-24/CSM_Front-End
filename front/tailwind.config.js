@@ -21,7 +21,8 @@ export default {
       backgroundImage: {
         'abrupt-gradient': 'linear-gradient(to bottom, #0D297A 50%, white 50%)',
         'bg-aulas': "url('./image-aulas.png')",
-        'pattern': "url('./y-so-serious-white.png')"
+        'pattern': "url('./y-so-serious-white.png')",
+        'login': "url('./image-aulas.png')",
       },
     },
   },
