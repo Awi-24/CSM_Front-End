@@ -7,6 +7,8 @@ import Landing from './pages/landing/Landing';
 import Voluntariado from './pages/engajamento/Engajamento';
 import Juridico from './pages/juridico/Juridico';
 import Aulas from './pages/desenvolvimento/Desenvolvimento';
+import Login from './pages/login/Login';
+import Registro from './pages/registro/Registro';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route path="/voluntariado" Component ={Voluntariado}/>
         <Route path="/proteção/juridica" Component={Juridico}/>
         <Route path="/aulas" Component={Aulas}/>
+        <Route path='/conta/login' Component={Login}/>
+        <Route path='/conta/registro' Component={Registro}/>
       </Routes>
       <Footer />
     </Router>

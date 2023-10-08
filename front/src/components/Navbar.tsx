@@ -50,7 +50,7 @@ function Navbar() {
             )}
           </li>
           <li>
-            <Link to="/conta" className="text-white md:text-center">Conta</Link>
+            <Link to="/conta/login" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Conta</Link>
           </li>
         </ul>
       </div>
