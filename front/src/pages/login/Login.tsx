@@ -8,15 +8,15 @@ function Login() {
   }
 
   return (
-    <div className="w-full">
-      <div className="h-fit flex flex-col md:flex-row">
+    <div className="w-full bg-blue-900">
+      <div className="h-screen flex flex-col md:flex-row">
         {/**Imagem com texto*/}
-        <div className="md:w-2/4 md:bg-login invisible md:visible h-0 md:h-fit">
-          <div className="me-10">
-            <h1 className="font-roboto font-medium md:mt-96 md:pt-56 text-white text-4xl w-fit text-start m-10">
+        <div className="md:w-2/4 bg-login bg-opacity-25 bg-cover invisible md:visible h-0 md:h-screen">
+          <div className="mt-20 ml-10">
+            <h1 className="font-roboto font-medium text-white text-4xl w-fit text-start">
               Faça parte do nosso projeto!
             </h1>
-            <p className="font-roboto md:pb-16 align-bottom font-regular m-10 text-white text-lg w-fit text-start">
+            <p className="font-roboto md:pb-16 mt-5 align-bottom font-regular text-white text-lg w-fit text-start">
               Buscamos pessoas de todo o Brasil para ajudar e participar dessa
               iniciativa.
             </p>
@@ -26,8 +26,8 @@ function Login() {
         <div className="bg-white md:w-2/4 flex flex-col justify-center items-center align-middle md:p-0 py-72">
           <div className="font-roboto text-center text-gray-800 m-10">
             <h1 className="font-medium text-4xl m-2">Entre na sua conta</h1>
-            <Link to="/registro" className="text-gray-600 ">
-              ou crie uma <span className="text-blue-500 underline">aqui</span>
+            <Link to="/conta/registro" className="text-gray-600 ">
+              ou crie uma <span className="text-blue-500 hover:underline">aqui</span>
             </Link>
           </div>
           <div className="flex flex-col justify-center align-middle items-center">
