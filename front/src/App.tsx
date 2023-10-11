@@ -9,6 +9,7 @@ import Juridico from './pages/juridico/Juridico';
 import Aulas from './pages/desenvolvimento/Desenvolvimento';
 import Login from './pages/login/Login';
 import Registro from './pages/registro/Registro';
+import Engajamento from './pages/engajamento/Engajamento';
 
 
 function App() {
@@ -20,11 +21,12 @@ function App() {
       <Routes>
         <Route path='/' Component={Landing}/>
         <Route path='/desenvolvimento' Component={Desenvolvimento}/>
+        <Route path='/engajamento' Component={Engajamento}/>
         <Route path="/voluntariado" Component ={Voluntariado}/>
         <Route path="/proteção/juridica" Component={Juridico}/>
         <Route path="/aulas" Component={Aulas}/>
         <Route path='/conta/login' Component={Login}/>
-        <Route path='/conta/registro' Component={Registro}/>
+        <Route path='/conta/registro' Component={Registro}/>        
       </Routes>
       <Footer />
     </Router>
