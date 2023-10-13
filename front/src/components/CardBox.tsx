@@ -30,3 +30,5 @@ const BoxCard: React.FC<BoxCardProps> = ({ icon, title, text, link }) => {
 };
 
 export default BoxCard;
+
+
