@@ -1,12 +1,38 @@
 import React, { ChangeEvent, useState } from "react";
+import Carousel from "react-material-ui-carousel";
 
 import CardBox from "../../components/CardBox";
 import PartnerBox from "../../components/PartnerBox";
 import Presentation from "../../components/Presentation";
 import CustomButton from "../../components/CustomButton";
+import SwiperCard from "../../components/SwiperCard";
+
+const eventsData = [
+  {
+    backgroundImage:
+      "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    title: "Evento 1",
+    paragraph:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  {
+    backgroundImage:
+      "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    title: "Evento 2",
+    paragraph: "Dança gatinho dança.",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  {
+    backgroundImage:
+      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    title: "Evento 3",
+    paragraph: "Descrição do Evento 3",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+];
 
 function Landing() {
-
   function handleInputChange(event: ChangeEvent<HTMLInputElement>): void {
     throw new Error("Function not implemented.");
   }
@@ -14,23 +40,61 @@ function Landing() {
   return (
     <div className="bg-landing w-full">
       {/* Max/Min Width*/}
-      <div className="">
+      <div className="w-full h-full">
         {/*Carrossel*/}
-        <div></div>
+        <Carousel>
+          {eventsData.map((event, index) => (
+            <SwiperCard
+              key={index}
+              backgroundImage={event.backgroundImage}
+              title={event.title}
+              paragraph={event.paragraph}
+              link={event.link}
+            />
+          ))}
+        </Carousel>
         {/*About Us*/}
-        <div className="flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5">
+        <div className="flex flex-row justify-center align-middle items-center mt-10 py-16 xs:px-2 sm:px-5 md:px-5">
           <Presentation title={"Centro de Serviços ao Migrante"} text={""} />
         </div>
         {/*Box with cards*/}
         <div className="flex flex-row justify-center align-middle items-center p-10 w-full bg-abrupt-gradient">
           <div className="bg-blue-200 w-4/6 rounded-md xs:w-full sm:w-full md:w-fit">
             <div className="flex flex-col justify-center sm:flex-row sm:justify-between sm:items-center">
-              <CardBox icon={"./svg/umbrella-solid.svg"} title={"Proteção"} text={"A sua unidade de atentidmento especializado, para a proteção dos seus direitos."} link={""} />
-              <CardBox icon={"./svg/people-group-solid.svg"} title={"Comunidade"} text={"Área dedicada a incentivar a participação em nossos eventos, aulas e workshops."} link={""} />
+              <CardBox
+                icon={"./svg/umbrella-solid.svg"}
+                title={"Proteção"}
+                text={
+                  "A sua unidade de atentidmento especializado, para a proteção dos seus direitos."
+                }
+                link={""}
+              />
+              <CardBox
+                icon={"./svg/people-group-solid.svg"}
+                title={"Comunidade"}
+                text={
+                  "Área dedicada a incentivar a participação em nossos eventos, aulas e workshops."
+                }
+                link={""}
+              />
             </div>
             <div className="flex flex-col justify-around sm:flex-row sm:justify-start sm:items-center">
-              <CardBox icon={"./svg/heart-solid.svg"} title={"Desenvolvimento"} text={"Sua rede de desenvolvimento pessoal e profissional dentro da nossa organização."} link={""} />
-              <CardBox icon={"./svg/bullhorn-solid.svg"} title={"Marketing"} text={"Área dedicada a divulgação e promocção de nossos eventos, aulas, ações, campanhas, etc. "} link={""} />
+              <CardBox
+                icon={"./svg/heart-solid.svg"}
+                title={"Desenvolvimento"}
+                text={
+                  "Sua rede de desenvolvimento pessoal e profissional dentro da nossa organização."
+                }
+                link={""}
+              />
+              <CardBox
+                icon={"./svg/bullhorn-solid.svg"}
+                title={"Marketing"}
+                text={
+                  "Área dedicada a divulgação e promocção de nossos eventos, aulas, ações, campanhas, etc. "
+                }
+                link={""}
+              />
             </div>
           </div>
         </div>
@@ -122,20 +186,16 @@ function Landing() {
               </div>
             </div>
             <CustomButton
-              text={
-                "Enviar"
-              }
+              text={"Enviar"}
               buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
               textClassName=""
               onClick={function (): void {
                 throw new Error("Function not implemented.");
               }}
             />
-
           </div>
         </div>
       </div>
-
     </div>
   );
 }
