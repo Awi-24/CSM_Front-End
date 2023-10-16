@@ -1,7 +1,7 @@
 import MediaQuery from "react-responsive";
 import CustomButton from "../../components/CustomButton";
 import PartnerBox from "../../components/PartnerBox";
-import imagem from "../../img/ratao.jpg"
+import imagem from "../../img/gps.png"
 
 function Juridico() {
   function handleClick(): void {
@@ -11,19 +11,19 @@ function Juridico() {
   return (
     <>
       <div className="">
-        <p>topo</p>
+        <p>aaa</p>
       </div>
       <div className="bg-white py-10">
         <p className="text-4xl font-semibold font-roboto text-center">Atendimento Presencial</p>
         <div className="flex">
           <div className="flex justify-center items-center w-1/2 my-16">
-            <p className="text-justify ml-20 text-xl font-roboto">
+            <p className="text-justify md:ml-20 sm:ml-10 xs:ml-6 text-xl font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium provident excepturi sint, fugit adipisci ducimus ullam. Hic quisquam reprehenderit nulla excepturi doloremque repellat praesentium adipisci nesciunt, officiis fuga velit harum.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magnam odio dolore nemo veritatis nulla est expedita delectus. Neque distinctio repellendus quaerat assumenda quos sapiente in, aperiam necessitatibus commodi labore.
-            </p>
+            </p>0
               </div>
           <div className="flex ml-20 w-1/2 my-16">
-            <img className="" src={imagem} alt="" height="400px" width="450px"/>
+            <img className="shadow-2xl md:mr-20 sm:mr-10 xs:mr-6 rounded-3xl sm:w-64 sm:h-64 xs:w-44 xs:h-44 md:w-96 md:h-96" src={imagem} alt="" height="400px" width="450px"/>
           </div>
         </div>
         <div className="flex justify-center items-center">
@@ -36,7 +36,26 @@ function Juridico() {
         </div>
       </div>
       <div className="inferior">
-        <p>aaaa</p>
+        <div>
+            <p className="flex flex-col text-white text-center font-roboto text-2xl font-medium md:pt-20 sm:pt-14 xs:pt-8">Guia de Documentações</p>
+            <p className="text-justify text-white py-8 xs:px-8 sm:px-12 md:px-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat necessitatibus nulla dolorum, libero ullam eum cumque odio facilis illo exercitationem fugit repellendus incidunt, laboriosam, adipisci ex magni est. Deleniti, ullam?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem delectus voluptatem libero asperiores dolor veritatis, ratione nulla maxime sapiente! Eaque praesentium optio sint quae ipsam? Reprehenderit assumenda ipsam distinctio!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro tempora molestiae ad, fuga nam repellat velit minus inventore repudiandae harum ipsum ea! Excepturi praesentium sed laudantium eligendi doloremque! Cumque, quo.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maxime nobis eos nostrum inventore quos eaque sit, voluptatibus debitis quidem culpa suscipit quo consectetur animi doloremque voluptates, laudantium autem cupiditate.
+            </p>
+        </div>
+        <div>
+            {/* CARROSSEL N SEI FAZER */}
+        </div>
+        <div>
+
+        </div>
+        <p className="flex flex-col text-white text-center font-roboto text-2xl font-medium pt-6">Regulamentação</p>
+            <p className="text-justify text-white pt-8 md:pb-28 sm:pb-10 xs:pb-8 xs:px-8 sm:px-12 md:px-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat necessitatibus nulla dolorum, libero ullam eum cumque odio facilis illo exercitationem fugit repellendus incidunt, laboriosam, adipisci ex magni est. Deleniti, ullam?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem delectus voluptatem libero asperiores dolor veritatis, ratione nulla maxime sapiente! Eaque praesentium optio sint quae ipsam? Reprehenderit assumenda ipsam distinctio!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro tempora molestiae ad, fuga nam repellat velit minus inventore repudiandae harum ipsum ea! Excepturi praesentium sed laudantium eligendi doloremque! Cumque, quo.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maxime nobis eos nostrum inventore quos eaque sit, voluptatibus debitis quidem culpa suscipit quo consectetur animi doloremque voluptates, laudantium autem cupiditate.
+            </p>
       </div>
     </>
   );
