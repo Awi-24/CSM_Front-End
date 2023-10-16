@@ -21,26 +21,32 @@ const SwiperCard: FC<SwiperCardProps> = ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-
   };
 
   return (
     <div
-      className="h-screen w-full z-0"
+      className="h-screen w-full z-0 flex flex-row items-center align-middle justify-center"
       style={cardStyle}
     >
-      <div className="w-full h-full bg-gradient-to-t from-black to-transparent">
-        <div className="py-72"></div>
-        <div className="m-10 text-white">
-          <h1 className="font-roboto font-medium text-justify text-4xl md:text-5xl">
+      <div className="w-full h-full flex flex-col justify-center align-middle items-center bg-gradient-to-t from-blue-900 to-transparent">
+        <div className="py-50"></div>
+        <div className="m-10 text-white flex flex-col justify-center">
+          <h1 className="font-roboto font-medium text-center text-4xl md:text-5xl">
             {title || "Sem Evento"}
           </h1>
-          <p className="font-roboto font-thin text-base my-10 text-justify">
+          <p className="font-roboto font-thin text-base my-5 text-center max-w-4xl">
             {paragraph || "Um evento ainda não foi adicionado."}
           </p>
-          <a href={link} target="_blank" rel="noopener noreferrer" className="bg-blue-500 rounded-md font-roboto font-normal p-3 px-12 hover:bg-blue-300 hover-text-white mt-10">
-            Inscreva-se
-          </a>
+          <div className="flex flex-row justify-center">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 text-center w-fit rounded-md font-roboto font-normal p-3 px-12 hover:bg-blue-300 hover-text-white mt-10"
+            >
+              Inscreva-se
+            </a>
+          </div>
         </div>
       </div>
     </div>

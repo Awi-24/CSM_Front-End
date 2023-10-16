@@ -11,23 +11,23 @@ const eventsData = [
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Evento 1",
+    title: "Explicação de Lorem Ipsum",
     paragraph:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Evento 2",
-    paragraph: "Dança gatinho dança.",
+    title: "Motociata do Wanderlay",
+    paragraph: "Dança gatinho dança. j sdfskd sfgd hrth rher thfbfg jdg fjfgjetjsrt jt drtjdyjdg XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Evento 3",
-    paragraph: "Descrição do Evento 3",
+    title: "Forró de Abelha",
+    paragraph: "Descrição do Evento 3 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 ];
