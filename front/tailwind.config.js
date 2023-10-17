@@ -20,10 +20,11 @@ export default {
       },
       backgroundImage: {
         'abrupt-gradient': 'linear-gradient(to bottom, #0D297A 50%, white 50%)',
-        'abrupt-gradient2': 'linear-gradient(to bottom, white 50%, #0D297A 50%)',
+        'abrupt-gradient2': 'linear-gradient(to bottom, , #0D297A 50%)',
         'bg-aulas': "url('./image-aulas.png')",
         'pattern': "url('./y-so-serious-white.png')",
         'login': "url('./Login.jpg')",
+        
       },
     },
   },
