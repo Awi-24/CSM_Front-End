@@ -19,15 +19,15 @@ const eventsData = [
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Motociata do Wanderlay",
-    paragraph: "Dança gatinho dança. j sdfskd sfgd hrth rher thfbfg jdg fjfgjetjsrt jt drtjdyjdg XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    title: "Teste 2",
+    paragraph: "Dança gatinho dança.",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Forró de Abelha",
-    paragraph: "Descrição do Evento 3 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    title: "Teste 3",
+    paragraph: "Descrição do Evento 3",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 ];

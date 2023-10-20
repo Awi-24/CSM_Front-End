@@ -26,6 +26,8 @@ export default {
         'login': "url('./Login.jpg')",
         
       },
+      colors: {
+      },
     },
   },
   plugins: [],

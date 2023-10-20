@@ -25,10 +25,10 @@ const SwiperCard: FC<SwiperCardProps> = ({
 
   return (
     <div
-      className="h-screen w-full z-0 flex flex-row items-center align-middle justify-center"
+      className="h-screen w-full flex flex-row items-center align-middle justify-center z-0"
       style={cardStyle}
     >
-      <div className="w-full h-full flex flex-col justify-center align-middle items-center bg-gradient-to-t from-blue-900 to-transparent">
+      <div className="w-full h-full flex flex-col justify-center align-middle items-center bg-gradient-to-t from-blue-800 to-black/60">
         <div className="py-50"></div>
         <div className="m-10 text-white flex flex-col justify-center">
           <h1 className="font-roboto font-medium text-center text-4xl md:text-5xl">
@@ -42,7 +42,7 @@ const SwiperCard: FC<SwiperCardProps> = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-500 text-center w-fit rounded-md font-roboto font-normal p-3 px-12 hover:bg-blue-300 hover-text-white mt-10"
+              className="bg-blue-500 shadow-lg hover:shadow-blue-500 text-center w-fit rounded-md font-roboto font-normal p-2 px-12 hover:bg-blue-200 hover:text-blue-900 mt-10"
             >
               Inscreva-se
             </a>
