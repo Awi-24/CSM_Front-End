@@ -1,7 +1,34 @@
-import MediaQuery from "react-responsive";
 import CustomButton from "../../components/CustomButton";
-import PartnerBox from "../../components/PartnerBox";
 import imagem from "../../img/gps.png"
+
+import SwiperCard from "../../components/SwiperCard";
+import Carousel from "react-material-ui-carousel";
+
+
+const eventsData = [
+  {
+    backgroundImage:
+      "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    title: "Explicação de Lorem Ipsum",
+    paragraph:
+      "qro saber d prr nhuma",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  {
+    backgroundImage:
+      "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    title: "Teste 2",
+    paragraph: "Dança gatinho dança.",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  {
+    backgroundImage:
+      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    title: "Teste 3",
+    paragraph: "Descrição do Evento 3",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+];
 
 function Juridico() {
   function handleClick(): void {
@@ -44,8 +71,20 @@ function Juridico() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maxime nobis eos nostrum inventore quos eaque sit, voluptatibus debitis quidem culpa suscipit quo consectetur animi doloremque voluptates, laudantium autem cupiditate.
             </p>
         </div>
-        <div>
-            {/* CARROSSEL N SEI FAZER */}
+        <div className="flex flex-col">
+          <div className="px-32">
+        <Carousel>
+          {eventsData.map((event, index) => (
+            <SwiperCard
+            key={index}
+            backgroundImage={event.backgroundImage}
+            title={event.title}
+            paragraph={event.paragraph}
+            link={event.link}
+            />
+            ))}
+        </Carousel>
+            </div>
         </div>
         <div>
 
