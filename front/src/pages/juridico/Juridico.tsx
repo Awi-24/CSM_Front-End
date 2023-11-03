@@ -1,7 +1,7 @@
 import CustomButton from "../../components/CustomButton";
 import imagem from "../../img/gps.png"
 
-import SwiperCard from "../../components/SwiperCard";
+import SwiperCard2 from "../../components/Swiper2";
 import Carousel from "react-material-ui-carousel";
 
 
@@ -9,7 +9,7 @@ const eventsData = [
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Explicação de Lorem Ipsum",
+    title: "Documento 1",
     paragraph:
       "qro saber d prr nhuma",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -17,14 +17,14 @@ const eventsData = [
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Teste 2",
-    paragraph: "Dança gatinho dança.",
+    title: "Documento 2",
+    paragraph: "Descrição do documento",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Teste 3",
+    title: "Documento 3",
     paragraph: "Descrição do Evento 3",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
@@ -41,7 +41,7 @@ function Juridico() {
         <p>aaa</p>
       </div>
       <div className="bg-white py-10">
-        <p className="text-4xl font-semibold font-roboto text-center">Atendimento Presencial</p>
+        <p className="text-4xl font-medium font-roboto text-center pt-10">Atendimento Presencial</p>
         <div className="flex">
           <div className="flex justify-center items-center w-1/2 my-16">
             <p className="text-justify md:ml-20 sm:ml-10 xs:ml-6 text-xl font-roboto">
@@ -75,9 +75,8 @@ function Juridico() {
           <div className="px-32">
         <Carousel>
           {eventsData.map((event, index) => (
-            <SwiperCard
+            <SwiperCard2
             key={index}
-            backgroundImage={event.backgroundImage}
             title={event.title}
             paragraph={event.paragraph}
             link={event.link}
