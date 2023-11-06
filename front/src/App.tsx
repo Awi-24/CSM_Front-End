@@ -24,6 +24,7 @@ function App() {
         <Route path='/engajamento' Component={Engajamento}/>
         <Route path="/voluntariado" Component ={Voluntariado}/>
         <Route path="/juridico" Component={Juridico}/>
+        <Route path="/assistencia" Component={Assistencia}/>
         <Route path="/aulas" Component={Aulas}/>
         <Route path='/conta/login' Component={Login}/>
         <Route path='/conta/registro' Component={Registro}/>        
