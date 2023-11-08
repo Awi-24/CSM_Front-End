@@ -12,7 +12,7 @@ function Engajamento() {
               Nossa Comunidade
             </h1>
 
-            <p className="font-roboto text-md max-w-4xl font-normal text-justify pb-28  text-white">
+            <p className="font-roboto text-lg max-w-4xl font-normal text-justify pb-28  text-white">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
               odit ullam voluptates omnis. Quia ullam necessitatibus quisquam
               molestiae at facere, reiciendis eum recusandae, vel quasi nulla
@@ -33,7 +33,7 @@ function Engajamento() {
               <PhotoCircle backgroundImage={""} text={"Dance"} />
             </div>
             <div className="flex flex-row justify-center align-middle items-center">
-              <p className="font-roboto pt-20 text-md font-normal text-justify pb-20  text-white md:mx-10">
+              <p className="font-roboto pt-20 text-lg font-normal text-justify pb-20  text-white md:mx-10">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Delectus odit ullam voluptates omnis. Quia ullam necessitatibus
                 quisquam molestiae at facere, reiciendis eum recusandae, vel
@@ -55,7 +55,7 @@ function Engajamento() {
               Voluntarie-se!
             </p>
 
-            <div className="font-robot font-normal text-md my-10 text-justify">
+            <div className="font-robot font-normal text-lg my-10 text-justify">
               {" "}
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
               odit ullam voluptates omnis. Quia ullam necessitatibus quisquam

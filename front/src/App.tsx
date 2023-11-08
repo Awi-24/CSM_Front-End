@@ -10,6 +10,7 @@ import Aulas from './pages/desenvolvimento/Desenvolvimento';
 import Login from './pages/login/Login';
 import Registro from './pages/registro/Registro';
 import Engajamento from './pages/engajamento/Engajamento';
+import Assistencia from './pages/assistencia/Assistencia';
 
 
 function App() {
