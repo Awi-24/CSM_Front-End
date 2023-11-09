@@ -41,5 +41,16 @@
   border-radius: 3px; /* Borda arredondada do track */
 }
 
+.select_custom {
+  background-color: #fff;
+  color:#333
+  
+
+}
+
+.hover:select_custom {
+}
+
+
 
 

@@ -11,6 +11,7 @@ import Login from './pages/login/Login';
 import Registro from './pages/registro/Registro';
 import Engajamento from './pages/engajamento/Engajamento';
 import Assistencia from './pages/assistencia/Assistencia';
+import Admin from './pages/admin/Admin';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
         <Route path="/assistencia" Component={Assistencia}/>
         <Route path="/aulas" Component={Aulas}/>
         <Route path='/conta/login' Component={Login}/>
-        <Route path='/conta/registro' Component={Registro}/>        
+        <Route path='/conta/registro' Component={Registro}/>  
+        <Route path='/conta/admin' Component={Admin}/>      
       </Routes>
       <Footer />
     </Router>
