@@ -69,7 +69,7 @@ function Registro() {
             <input
               type="date"
               name="Nascimento"
-              placeholder="Data de Nascimento (DD/MM/YYYY)"
+              placeholder="Data de Nascimento (MM/DD/AAAA)"
               className={`m-2 rounded-lg bg-gray-200 border-2 text-gray-400 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
             />
             <input

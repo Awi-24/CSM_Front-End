@@ -1,6 +1,7 @@
 import BoxCard from "../../components/CardBox";
 import PhotoCircle from "../../components/PhotoCircle";
 import CustomButton from "../../components/CustomButton";
+import TeamsCard from "../../components/TeamsCard";
 
 function Engajamento() {
   return (
@@ -9,10 +10,10 @@ function Engajamento() {
         <div className="flex flex-row w-screen h-screen justify-center align-middle items-center py-10 md:py-10 xs:px-1 md:px-5 bg-bg-aulas bg-center bg-cover bg-fixed">
           <div className="text-center w-5/6 md:w-4/6 max-w-4xl ">
             <h1 className="pb-14 font-roboto font-medium text-blue-300 text-4xl md:text-5xl md:text-center">
-              Nossa Comunidade
+              Engajamento Comunitário
             </h1>
 
-            <p className="font-roboto text-lg max-w-4xl font-normal text-justify pb-28  text-white">
+            <p className="font-roboto text-lg max-w-4xl font-normal text-justify md:pb-28 pb-44  text-white">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
               odit ullam voluptates omnis. Quia ullam necessitatibus quisquam
               molestiae at facere, reiciendis eum recusandae, vel quasi nulla
@@ -44,6 +45,31 @@ function Engajamento() {
                 libero asperiores laboriosam aliquam.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="flex flex-row justify-center align-middle items-center py-10 md:py-10 xs:px-1 md:px-5">
+          <div className="text-center flex flex-col text-white w-5/6 md:4/6 max-w-4xl">
+            <div className="flex flex-col justify-center items-center align-middle">
+            <TeamsCard
+              icon={""}
+              title={"ASSISTÊNCIA PSICO-SOCIAL"}
+              text={""}
+              link={""}
+            />
+            <TeamsCard
+              icon={""}
+              title={"ÁREA EDUCACIONAL"}
+              text={""}
+              link={""}
+            />
+            <TeamsCard 
+              icon={""} 
+              title={"ÁREA JURÍDICA"} 
+              text={""} 
+              link={""} 
+            />
+            </div>
+
           </div>
         </div>
       </div>
