@@ -12,6 +12,7 @@ import Registro from './pages/registro/Registro';
 import Engajamento from './pages/engajamento/Engajamento';
 import Assistencia from './pages/assistencia/Assistencia';
 import Admin from './pages/admin/Admin';
+import psicossocial from './pages/psicossocial/psicossocial';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/engajamento' Component={Engajamento}/>
         <Route path="/voluntariado" Component ={Voluntariado}/>
         <Route path="/juridico" Component={Juridico}/>
+        <Route path="/psicossocial" Component={psicossocial}/>
         <Route path="/assistencia" Component={Assistencia}/>
         <Route path="/aulas" Component={Aulas}/>
         <Route path='/conta/login' Component={Login}/>
