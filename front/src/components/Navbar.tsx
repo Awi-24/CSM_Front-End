@@ -44,7 +44,7 @@ function Navbar() {
                   <Link to="/juridico" className="block px-6 py-2 hover:bg-blue-300 rounded-t-xl rounded-b-none">Juridica</Link>
                 </li>
                 <li>
-                  <Link to="/psico-social" className="block px-6 py-2 hover:bg-blue-300 rounded-b-xl">Psicosocial</Link>
+                  <Link to="/psicossocial" className="block px-6 py-2 hover:bg-blue-300 rounded-b-xl">Psicosocial</Link>
                 </li>
               </ul>
             )}

@@ -24,7 +24,7 @@ export default {
         'bg-aulas': "url('./image-aulas.png')",
         'pattern': "url('./y-so-serious-white.png')",
         'login': "url('./Login.jpg')",
-        
+        'psicossocial' : "url('./src/img/psicossocial.png')",      
       },
       colors: {
       },
