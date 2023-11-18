@@ -55,7 +55,12 @@ function Landing() {
         </Carousel>
         {/*About Us*/}
         <div className="flex flex-row justify-center align-middle items-center mt-10 py-16 xs:px-2 sm:px-5 md:px-5">
-          <Presentation title={"Centro de Serviços ao Migrante"} text={""} />
+          <Presentation
+            title={"Centro de Serviços ao Migrante"}
+            text={
+              "Somos o bloco no qual tem como foco principal elaborar ações para auxiliar as pessoas no processo de adesão à comunidade brasileira, através de oficinas profissionalizantes, ações em parceira com outras instituições com o intuito de ajudar promover a cidadania e independência dos indivíduos. Dessa forma, em contato com a comunidade local criamos essa ponte para que os imigrantes tenham uma ajuda no processo de adesão à comunidade local, através ações promovidas pelos voluntários, como por exemplo oficinas de capacitação para criação de produtos, palestras de gerenciamento financeiro e oficinas de arterapia para as crianças. A elaboração dessas ações, e do funcionamento do bloco, está em constante diálogo com os demais blocos para organizar e articular as datas e horários de cada ação."
+            }
+          />
         </div>
         {/*Box with cards*/}
         <div className="flex flex-row justify-center align-middle items-center p-10 w-full bg-abrupt-gradient">

@@ -92,10 +92,10 @@ function EditForm({ onClose, onSave, initialData }: EditFormProps) {
           className='w-full mb-4 rounded-md bg-gray-200 h-8 text-lg'
         />
         <div className='flex justify-end'>
-          <button className='bg-blue-800 text-white px-4 py-2 rounded-md mr-2' onClick={handleSave}>
+          <button className='bg-blue-800 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-500' onClick={handleSave}>
             Salvar
           </button>
-          <button className='bg-gray-300 px-4 py-2 rounded-md' onClick={onClose}>
+          <button className='bg-gray-300 px-4 py-2 rounded-md hover:bg-red-500 hover:text-white' onClick={onClose}>
             Cancelar
           </button>
         </div>

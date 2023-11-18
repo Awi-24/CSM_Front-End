@@ -37,11 +37,11 @@ function ListBox({ eventName, eventDate, eventLocation }: ListBoxProps) {
         <h1>{eventDate || 'xx/xx/xxxx'}</h1>
         <h1>{eventLocation || 'Local'}</h1>
         <div className='flex flex-row justify-around gap-4'>
-          <button className='bg-blue-800 p-2 rounded-md text-white mx-2' onClick={handleEdit}>
+          <button className='bg-blue-800 p-2 rounded-md text-white mx-2 hover:bg-blue-600' onClick={handleEdit}>
             Editar
           </button>
           {/* Adicione a lógica para excluir o evento aqui */}
-          <button className='bg-red-800 p-2 rounded-md text-white mx-2'>Excluir</button>
+          <button className='bg-red-800 p-2 rounded-md text-white mx-2 hover:bg-red-600'>Excluir</button>
         </div>
       </div>
 

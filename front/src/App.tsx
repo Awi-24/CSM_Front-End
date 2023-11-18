@@ -6,7 +6,7 @@ import Desenvolvimento from './pages/desenvolvimento/Desenvolvimento';
 import Landing from './pages/landing/Landing';
 import Voluntariado from './pages/engajamento/Engajamento';
 import Juridico from './pages/juridico/Juridico';
-import Aulas from './pages/desenvolvimento/Desenvolvimento';
+import Aulas from './pages/desenvolvimento/Aulas';
 import Login from './pages/login/Login';
 import Registro from './pages/registro/Registro';
 import Engajamento from './pages/engajamento/Engajamento';
@@ -29,7 +29,7 @@ function App() {
         <Route path="/juridico" Component={Juridico}/>
         <Route path="/psicossocial" Component={psicossocial}/>
         <Route path="/assistencia" Component={Assistencia}/>
-        <Route path="/aulas" Component={Aulas}/>
+        <Route path="/desenvolvimento/aulas" Component={Aulas}/>
         <Route path='/conta/login' Component={Login}/>
         <Route path='/conta/registro' Component={Registro}/>  
         <Route path='/conta/admin' Component={Admin}/>      

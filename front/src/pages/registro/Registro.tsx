@@ -10,14 +10,37 @@ interface Pais {
   sigla: string;
 }
 
+interface Genero {
+  id: number;
+  nome: string;
+}
+
+
+
 function Registro() {
   const [selectedPais, setSelectedPais] = useState<string>("");
-
+  const [selectedGenero, setSelectedGenero] = useState<string>("");
   const paises: Pais[] = paisesData; // Use o JSON diretamente como um array de objetos do tipo Pais.
 
-  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  const generos: Genero[] = [
+    {id: 1, nome: "Masculino"},
+    {id: 2, nome:"Feminino"},
+    {id: 3, nome: 'Não binário'},
+    {id: 4, nome: 'Agênero'},
+    {id: 5, nome: 'Bigênero'},
+    {id: 6, nome: 'Gênero fluido'},
+    {id: 7, nome: 'Outro'},
+  ]
+
+  const handleChangePais = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedPais(event.target.value);
+    
   };
+  const handleChangeGenero = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedGenero(event.target.value);
+    
+  };
+
 
   return (
     <div className="w-full bg-blue-900">
@@ -44,6 +67,20 @@ function Registro() {
               placeholder="Sobrenome"
               className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
             />
+        <select
+          value={selectedGenero}
+          onChange={handleChangeGenero}
+          className="m-2 rounded-lg bg-gray-200 hover:text-black border-2 text-gray-800 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80"
+        >
+          <option value="" className="">
+            Selecione um gênero
+          </option>
+          {generos.map((genero: Genero) => (
+            <option key={genero.id} value={genero.nome}>
+              {genero.nome}
+            </option>
+          ))}
+        </select>
           </div>
           <div className="flex flex-wrap justify-center items-center align-middle">
             <input
@@ -70,7 +107,7 @@ function Registro() {
               type="date"
               name="Nascimento"
               placeholder="Data de Nascimento (MM/DD/AAAA)"
-              className={`m-2 rounded-lg bg-gray-200 border-2 text-gray-400 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
+              className={`m-2 rounded-lg bg-gray-200 border-2 text-gray-800 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
             />
             <input
               type="password"
@@ -80,14 +117,14 @@ function Registro() {
             />
             <select
               value={selectedPais}
-              onChange={handleChange}
-              className="m-2 rounded-lg bg-gray-200 hover:text-black border-2 text-gray-400 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80"
+              onChange={handleChangePais}
+              className="m-2 rounded-lg bg-gray-200 hover:text-black border-2 text-gray-800 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80"
             >
               <option value="" className="">Selecione um país</option>
-              {paises.map((pais: Pais) => (
-                <option key={pais.nome_pais} value={pais.nome_pais} >
-                  {pais.nome_pais}
-                </option>
+                {paises.map((pais: Pais) => (
+                  <option key={pais.nome_pais} value={pais.nome_pais} >
+                    {pais.nome_pais}
+              </option>
               ))}
             </select>
           </div>
