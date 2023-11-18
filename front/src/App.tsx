@@ -13,6 +13,7 @@ import Engajamento from './pages/engajamento/Engajamento';
 import Assistencia from './pages/assistencia/Assistencia';
 import Admin from './pages/admin/Admin';
 import psicossocial from './pages/psicossocial/psicossocial';
+import Usuario from './pages/usuario/Usuario';
 
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
         <Route path="/desenvolvimento/aulas" Component={Aulas}/>
         <Route path='/conta/login' Component={Login}/>
         <Route path='/conta/registro' Component={Registro}/>  
-        <Route path='/conta/admin' Component={Admin}/>      
+        <Route path='/conta/admin' Component={Admin}/>   
+        <Route path='/conta/usuario' Component={Usuario}/>
+           
       </Routes>
       <Footer />
     </Router>

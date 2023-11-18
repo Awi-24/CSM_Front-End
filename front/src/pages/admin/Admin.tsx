@@ -46,7 +46,7 @@ function Admin() {
   }
 
   return (
-    <div className="w-full bg-slate-200 h-screen flex flex-col justify-center align-middle items-center">
+    <div className="w-full bg-slate-200 h-full flex flex-col justify-center align-middle items-center">
       {/* ... (seu código existente) */}
       <div className="flex flex-col justify-center items-center align-middle">
         <h1 className="text-5xl font-roboto font-medium mb-4 mt-10">
