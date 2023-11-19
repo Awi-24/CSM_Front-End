@@ -74,7 +74,7 @@ function Usuario() {
 
   return (
     <div className="w-full bg-blue-900">
-      <div className="h-full flex flex-row ">
+      <div className="h-full md:h-screen  flex flex-row ">
         <div className="bg-white w-full flex flex-col justify-center items-center align-middle md:p-0">
           <div></div>
           <div className="font-roboto text-center text-gray-800 m-10">

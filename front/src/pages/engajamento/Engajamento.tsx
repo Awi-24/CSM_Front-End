@@ -12,7 +12,6 @@ function Engajamento() {
             <h1 className="pb-14 font-roboto font-medium text-blue-300 text-4xl md:text-5xl md:text-center">
               Engajamento Comunitário
             </h1>
-
             <p className="font-roboto text-lg max-w-4xl font-normal text-justify md:pb-28 pb-44  text-white">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
               odit ullam voluptates omnis. Quia ullam necessitatibus quisquam
@@ -28,10 +27,10 @@ function Engajamento() {
         <div className="flex flex-row justify-center align-middle items-center py-10 md:py-10 xs:px-1 md:px-5">
           <div className="text-center w-5/6 md:4/6 max-w-4xl">
             <div className="flex flex-row overflow-scroll -mt-32 md:overflow-auto items-center align-middle justify-between gap-5">
-              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Dance"} />
-              <PhotoCircle backgroundImage={""} text={"Dance"} />
-              <PhotoCircle backgroundImage={""} text={"Dance"} />
-              <PhotoCircle backgroundImage={""} text={"Dance"} />
+              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Coordenadora"} />
+              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Vice-Coordenadora"} />
+              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Membro"} />
+              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Membro"} />
             </div>
             <div className="flex flex-row justify-center align-middle items-center">
               <p className="font-roboto pt-20 text-lg font-normal text-justify pb-20  text-white md:mx-10">

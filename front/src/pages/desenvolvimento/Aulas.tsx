@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import AulasBox from "../../components/AulasBox";
 
 function Aulas() {
   const [filtro, setFiltro] = useState("");
-  const aulasData = [
-    { id: 1, title: "Aula 1", turma: "Turma A", materia: "Matéria X" },
-    { id: 2, title: "Aula 2", turma: "Turma B", materia: "Matéria Y" },
-    { id: 3, title: "Aula 3", turma: "Turma A", materia: "Matéria Z" },
-    { id: 4, title: "Aula 3", turma: "Turma A", materia: "Matéria Z" },
-    { id: 5, title: "Aula 3", turma: "Turma A", materia: "Matéria Z" },
-    { id: 6, title: "Aula 3", turma: "Turma A", materia: "Matéria Z" },
-    // Adicione mais dados conforme necessário
-  ];
+  const [aulasData, setAulasData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5555/api/get-aulas-data");
+        setAulasData(response.data);
+      } catch (error) {
+        console.error("Erro ao obter dados do backend:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const aulasFiltradas = aulasData.filter(
     (aula) =>
@@ -21,14 +27,13 @@ function Aulas() {
   );
 
   return (
-    <div className="w-full h-full flex flex-col items-center font-roboto ">
+    <div className="w-full h-full flex flex-col items-center font-roboto">
       {/* Aulas Recentes */}
       <div className="w-4/6 my-8">
         <h1 className="text-5xl text-white font-roboto font-medium mb-6 mt-12 text-center">
           Aulas Recentes
         </h1>
         <div className="w-full flex flex-wrap justify-center gap-4">
-          {/* Renderize as AulasBox com dados de exemplo */}
           {aulasData.map((aula) => (
             <AulasBox
               key={aula.id}
@@ -52,7 +57,7 @@ function Aulas() {
               placeholder="Filtrar por título, matéria ou turma"
               value={filtro}
               onChange={(e) => setFiltro(e.target.value)}
-              className="p-2 rounded-md border border-gray-300 w-96"
+              className="p-2 mt-2 rounded-md border border-gray-300 w-96"
             />
           </div>
 
@@ -62,7 +67,6 @@ function Aulas() {
             </p>
           ) : (
             <div className="w-4/6 flex flex-wrap justify-center gap-4">
-              {/* Renderize as AulasBox filtradas */}
               {aulasFiltradas.map((aula) => (
                 <AulasBox
                   key={aula.id}

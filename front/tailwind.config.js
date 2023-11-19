@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import Juridico from './src/pages/juridico/Juridico';
 
 export default {
   content: [
@@ -24,7 +25,8 @@ export default {
         'bg-aulas': "url('./image-aulas.png')",
         'pattern': "url('./y-so-serious-white.png')",
         'login': "url('./Login.jpg')",
-        'psicossocial' : "url('./src/img/psicossocial.png')",      
+        'psicossocial' : "url('./src/img/psicossocial.png')",
+        'Juridico' : "url('./juridico.png')",      
       },
       colors: {
       },

@@ -1,17 +1,14 @@
 import CustomButton from "../../components/CustomButton";
-import imagem from "../../img/gps.png"
+import Mapa from "../../img/Mapa.png";
 
-import SwiperCard2 from "../../components/Swiper2";
-import Carousel from "react-material-ui-carousel";
-
+import SwiperCard2 from "../../components/Documentos";
 
 const eventsData = [
   {
     backgroundImage:
       "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     title: "Documento 1",
-    paragraph:
-      "qro saber d prr nhuma",
+    paragraph: "qro saber d prr nhuma",
     link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
@@ -30,72 +27,128 @@ const eventsData = [
   },
 ];
 
+const openLink = (url: string): void => {
+  window.open(url, "_blank");
+};
+
 function Juridico() {
   function handleClick(): void {
     throw new Error("Function not implemented.");
   }
 
   return (
-    <>
-      <div className="">
-        <p>aaa</p>
+    <div className="w-full h-full">
+      <div className="flex flex-col justify-center align-middle items-center h-screen bg-Juridico">
+        <div className="text-center w-5/6 md:w-4/6 max-w-4xl ">
+          <h1 className="pb-14 font-roboto font-medium text-blue-300 text-4xl md:text-5xl md:text-center">
+            Jurídico
+          </h1>
+
+          <p className="font-roboto text-lg max-w-4xl font-normal text-justify md:pb-28 pb-44  text-white">
+            Compreendemos a importância da regularização para os migrantes. Além
+            de garantir a conformidade legal, a regularização abre portas para
+            uma série de direitos e benefícios fundamentais. Em nossa seção
+            exclusiva sobre regularização, exploramos a legislação brasileira,
+            destacando a relevância de estar em conformidade com as normativas
+            migratórias. Oferecemos insights sobre os procedimentos necessários,
+            tornando o processo de regularização compreensível e acessível.
+          </p>
+        </div>
       </div>
-      <div className="bg-white py-10">
-        <p className="text-4xl font-medium font-roboto text-center pt-10">Atendimento Presencial</p>
-        <div className="flex">
-          <div className="flex justify-center items-center w-1/2 my-16">
-            <p className="text-justify md:ml-20 sm:ml-10 xs:ml-6 text-xl font-roboto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium provident excepturi sint, fugit adipisci ducimus ullam. Hic quisquam reprehenderit nulla excepturi doloremque repellat praesentium adipisci nesciunt, officiis fuga velit harum.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magnam odio dolore nemo veritatis nulla est expedita delectus. Neque distinctio repellendus quaerat assumenda quos sapiente in, aperiam necessitatibus commodi labore.
-            </p>0
-              </div>
-          <div className="flex ml-20 w-1/2 my-16">
-            <img className="shadow-2xl md:mr-20 sm:mr-10 xs:mr-6 rounded-3xl sm:w-64 sm:h-64 xs:w-44 xs:h-44 md:w-96 md:h-96" src={imagem} alt="" height="400px" width="450px"/>
+
+      <div className="bg-white py-10 flex flex-col justify-center align-middle items-center">
+        <h1 className="text-4xl md:text-5xl font-medium font-roboto text-start mb-10 text-justify">
+          Atendimento Presencial
+        </h1>
+        <div className="flex flex-wrap md:justify-around justify-center items-center align-middle m-0 md:m-10">
+          <p className="font-roboto text-lg max-w-4xl md:w-3/6 m-8 md:m-0 font-normal text-justify  text-black">
+            Entendemos que a obtenção de documentação durante o processo
+            migratório pode levantar diversas dúvidas e demandar assistência
+            personalizada. É por isso que, no Centro de Serviço ao Migrante
+            (CSM), priorizamos a sua jornada e oferecemos a conveniência do
+            agendamento de consultas presenciais. Ao agendar uma consulta
+            conosco, você terá a oportunidade de discutir suas necessidades
+            específicas, esclarecer dúvidas sobre documentação e receber
+            orientações personalizadas. Nossa equipe jurídica especializada está
+            pronta para fornecer suporte prático, desde a compreensão dos
+            requisitos documentais até o auxílio nos procedimentos de
+            regularização. O processo de agendamento é simples e projetado para
+            se adequar à sua agenda. Basta entrar em contato conosco para marcar
+            uma consulta presencial, e teremos o prazer de guiá-lo em cada passo
+            do caminho. No CSM, estamos comprometidos em tornar sua experiência
+            de obtenção de documentação mais acessível, personalizada e
+            bem-sucedida.
+          </p>
+          <div className="mb-10">
+            <img
+              className="w-96 h-96 rounded-md m-4 md:m-0"
+              src={Mapa}
+              alt="Imagem de um mapa"
+            />
           </div>
         </div>
-        <div className="flex justify-center items-center">
+        <CustomButton
+          text={"Agendar Suporte"}
+          buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
+          textClassName=""
+          onClick={() => openLink("")}
+        />
+      </div>
+      <div className="flex flex-row w-full h-fit justify-center align-middle items-center my-10 py-10 md:py-5 xs:px-1 md:px-5 text-white">
+        <div className="text-center w-5/6 md:w-4/6 max-w-4xl">
+          <h1 className="pb-14 font-roboto font-medium text-blue-300 text-4xl md:text-5xl md:text-center">
+            Guia de Documentações
+          </h1>
+          <p className="font-roboto text-lg max-w-4xl font-normal text-justify">
+            Este guia informativo visa oferecer orientações essenciais sobre
+            documentos cruciais durante o processo de migração. Aqui, você
+            encontrará informações importantes sobre o Cadastro de Pessoa Física
+            (CPF), Registro Geral (RG) e Registro Nacional de Estrangeiros
+            (RNE).
+          </p>
+        </div>
+      </div>
+      <div className="h-full flex flex-col justify-center items-center align-middle">
+        <SwiperCard2 />
+      </div>
+      <div className="flex flex-row w-full h-fit justify-center align-middle items-center my-10 py-10 md:py-5 xs:px-1 md:px-5 text-white">
+        <div className="text-center w-5/6 md:w-4/6 max-w-4xl">
+          <h1 className="pb-14 font-roboto font-medium text-blue-300 text-4xl md:text-5xl md:text-center">
+            Regulamentação
+          </h1>
+          <p className="font-roboto text-lg max-w-4xl font-normal text-justify mb-10">
+            A regularização no Brasil é de extrema importância para os
+            migrantes, representando não apenas a conformidade legal, mas também
+            o acesso a uma série de direitos e benefícios fundamentais. Ao
+            regularizar sua situação migratória, os indivíduos se integram de
+            maneira mais efetiva à sociedade brasileira, garantindo o pleno
+            exercício de suas atividades, seja no âmbito profissional,
+            educacional ou social. A regulamentação brasileira proporciona aos
+            migrantes a segurança jurídica necessária para desfrutar de serviços
+            públicos, participar do mercado de trabalho de forma legal e
+            usufruir de programas sociais. Além disso, estar regularizado
+            facilita o acesso a documentos essenciais, como o Registro Nacional
+            de Estrangeiros (RNE) e o Cadastro de Pessoa Física (CPF),
+            simplificando processos cotidianos e contribuindo para uma
+            integração mais suave. A legislação migratória brasileira reflete o
+            compromisso do país com a acolhida e a inclusão, buscando garantir
+            que os migrantes desfrutem de condições dignas e equitativas. A
+            regularização não apenas atende às normativas legais, mas também
+            fortalece os laços de solidariedade e respeito entre as diferentes
+            comunidades, promovendo a diversidade e a construção de uma
+            sociedade mais justa e inclusiva.
+          </p>
           <CustomButton
-            text="Agendar"
-            onClick={handleClick}
-            buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium py-4"
+            text={"Saiba Mais"}
+            buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
             textClassName=""
+            onClick={() =>
+              openLink("http://www.guiadoimigrante.sp.gov.br/#gsc.tab=0")
+            }
           />
         </div>
       </div>
-      <div className="inferior">
-        <div>
-            <p className="flex flex-col text-white text-center font-roboto text-2xl font-medium md:pt-20 sm:pt-14 xs:pt-8">Guia de Documentações</p>
-            <p className="text-justify text-white py-8 xs:px-8 sm:px-12 md:px-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat necessitatibus nulla dolorum, libero ullam eum cumque odio facilis illo exercitationem fugit repellendus incidunt, laboriosam, adipisci ex magni est. Deleniti, ullam?
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem delectus voluptatem libero asperiores dolor veritatis, ratione nulla maxime sapiente! Eaque praesentium optio sint quae ipsam? Reprehenderit assumenda ipsam distinctio!
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro tempora molestiae ad, fuga nam repellat velit minus inventore repudiandae harum ipsum ea! Excepturi praesentium sed laudantium eligendi doloremque! Cumque, quo.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maxime nobis eos nostrum inventore quos eaque sit, voluptatibus debitis quidem culpa suscipit quo consectetur animi doloremque voluptates, laudantium autem cupiditate.
-            </p>
-        </div>
-        <div className="flex flex-col">
-          <div className="px-32">
-        <Carousel>
-          {eventsData.map((event, index) => (
-            <SwiperCard2
-            key={index}
-            title={event.title}
-            paragraph={event.paragraph}
-            link={event.link}
-            />
-            ))}
-        </Carousel>
-            </div>
-        </div>
-        <div>
-
-        </div>
-        <p className="flex flex-col text-white text-center font-roboto text-2xl font-medium pt-6">Regulamentação</p>
-            <p className="text-justify text-white pt-8 md:pb-28 sm:pb-10 xs:pb-8 xs:px-8 sm:px-12 md:px-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat necessitatibus nulla dolorum, libero ullam eum cumque odio facilis illo exercitationem fugit repellendus incidunt, laboriosam, adipisci ex magni est. Deleniti, ullam?
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem delectus voluptatem libero asperiores dolor veritatis, ratione nulla maxime sapiente! Eaque praesentium optio sint quae ipsam? Reprehenderit assumenda ipsam distinctio!
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro tempora molestiae ad, fuga nam repellat velit minus inventore repudiandae harum ipsum ea! Excepturi praesentium sed laudantium eligendi doloremque! Cumque, quo.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maxime nobis eos nostrum inventore quos eaque sit, voluptatibus debitis quidem culpa suscipit quo consectetur animi doloremque voluptates, laudantium autem cupiditate.
-            </p>
-      </div>
-    </>
+    </div>
   );
 }
 

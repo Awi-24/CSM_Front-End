@@ -16,7 +16,7 @@ function Desenvolvimento() {
     <div className="bg-landing w-full font-roboto">
       <div>
         {/* Introdução */}
-        <div className="h-screen flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-bg-aulas bg-center bg-cover bg-fixed">
+        <div className="h-full md:h-screen flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-bg-aulas bg-center bg-cover bg-fixed">
           <div className="text-center md:text-start w-5/6 md:w-4/6 max-w-4xl ">
             <h1 className="font-roboto font-medium text-blue-300 text-4xl md:text-5xl text-center md:text-start">
               Desenvolvimento Pessoal

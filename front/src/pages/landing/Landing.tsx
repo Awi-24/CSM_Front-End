@@ -1,5 +1,6 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
+import axios from "axios";
 
 import CardBox from "../../components/CardBox";
 import PartnerBox from "../../components/PartnerBox";
@@ -7,52 +8,59 @@ import Presentation from "../../components/Presentation";
 import CustomButton from "../../components/CustomButton";
 import SwiperCard from "../../components/SwiperCard";
 
-const eventsData = [
-  {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Explicação de Lorem Ipsum",
-    paragraph:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Teste 2",
-    paragraph: "Dança gatinho dança.",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Teste 3",
-    paragraph: "Descrição do Evento 3",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-];
-
 function Landing() {
-  function handleInputChange(event: ChangeEvent<HTMLInputElement>): void {
-    throw new Error("Function not implemented.");
-  }
+  const [formData, setFormData] = useState({
+    nome: '',
+    sobrenome: '',
+    email: '',
+    telefone: '',
+    mensagem: '',
+  });
+
+  const [eventsData, setEventsData] = useState([]);
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const enviarEmail = async (): Promise<void> => {
+    try {
+      await axios.post('http://localhost:5555/api/enviar-email', formData);
+      alert('E-mail enviado com sucesso!');
+    } catch (error) {
+      console.error('Erro ao enviar o e-mail:', error);
+      alert('Erro ao enviar o e-mail. Por favor, tente novamente.');
+    }
+  };
+
+  useEffect(() => {
+    const fetchEventsData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5555/api/get-events-data');
+        setEventsData(response.data);
+      } catch (error) {
+        console.error('Erro ao obter dados do backend:', error);
+      }
+    };
+
+    fetchEventsData();
+  }, []);
 
   return (
     <div className="bg-landing w-full">
-      {/* Max/Min Width*/}
-      <div className="w-full h-full">
-        {/*Carrossel*/}
-        <Carousel>
-          {eventsData.map((event, index) => (
-            <SwiperCard
-              key={index}
-              backgroundImage={event.backgroundImage}
-              title={event.title}
-              paragraph={event.paragraph}
-              link={event.link}
-            />
-          ))}
-        </Carousel>
+      {/* Restante do código... */}
+      <Carousel>
+        {eventsData.map((event, index) => (
+          <SwiperCard
+            key={index}
+            backgroundImage={event.backgroundImage}
+            title={event.title}
+            paragraph={event.paragraph}
+            link={event.link}
+          />
+        ))}
+      </Carousel>
         {/*About Us*/}
         <div className="flex flex-row justify-center align-middle items-center mt-10 py-16 xs:px-2 sm:px-5 md:px-5">
           <Presentation
@@ -194,14 +202,11 @@ function Landing() {
               text={"Enviar"}
               buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
               textClassName=""
-              onClick={function (): void {
-                throw new Error("Function not implemented.");
-              }}
+              onClick={enviarEmail}
             />
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
