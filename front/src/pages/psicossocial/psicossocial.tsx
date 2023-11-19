@@ -1,6 +1,5 @@
 import CustomButton from "../../components/CustomButton";
 import imagem from "../../img/gps.png";
-import SwiperCard2 from "../../components/Swiper2";
 
 function psicossocial() {
   function handleClick(): void {
