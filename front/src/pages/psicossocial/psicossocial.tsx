@@ -51,11 +51,12 @@ function psicossocial() {
             laudantium autem cupiditate.
           </p>
 
-          <div className=" flex justify-center gap-[35px] ">
-            <div className="relative w-[312px] h-[430px] bg-bg-aulas rounded-[25px]" />
-            <div className="relative w-[312px] h-[430px] bg-bg-aulas rounded-[25px]" />
-            <div className="relative w-[312px] h-[430px] bg-bg-aulas rounded-[25px]" />
-          </div>
+          <div className="flex justify-center xs:flex-col xs:items-center gap-[35px] lg:flex-row">
+    <div className="relative w-[312px] h-[430px] bg-bg-aulas rounded-[25px] xs:px-2 sm:px-5 md:px-5" />
+    <div className="relative w-[312px] h-[430px] bg-bg-aulas rounded-[25px] xs:px-2 sm:px-5 md:px-5" />
+    <div className="relative w-[312px] h-[430px] bg-bg-aulas rounded-[25px] xs:px-2 sm:px-5 md:px-5" />
+</div>
+
         </div>
         <div className="flex flex-col">
           <div className="px-32"></div>
@@ -67,27 +68,23 @@ function psicossocial() {
         <p className="text-4xl font-medium font-roboto text-center pt-10">
           Agendar atendimento
         </p>
-        <div className="flex">
-          <div className="flex justify-center items-center w-1/2 my-16">
-            <p className="text-justify md:ml-20 sm:ml-10 xs:ml-6 text-xl font-roboto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium provident excepturi sint, fugit adipisci ducimus
-              ullam. Hic quisquam reprehenderit nulla excepturi doloremque
-              repellat praesentium adipisci nesciunt, officiis fuga velit harum.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magnam
-              odio dolore nemo veritatis nulla est expedita delectus. Neque
-              distinctio repellendus quaerat assumenda quos sapiente in, aperiam
-              necessitatibus commodi labore.
+        <div className="flex flex-col-reverse md:flex-row items-center">
+          <div className="flex justify-center items-center w-full md:w-1/2 my-16">
+            <p className="text-justify text-xl px-4 md:px-12 lg:px-36 font-roboto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              sit amet sodales libero. Cras at enim a diam facilisis tristique.
+              Cras dignissim aliquam tempor. Praesent bibendum quam nibh,
+              aliquam finibus elit sagittis eget. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Praesent sit amet sodales libero.
+              Cras at enim a diam facilisis tristique. Cras dignissim aliquam
+              tempor
             </p>
-            0
           </div>
-          <div className="flex ml-20 w-1/2 my-16">
+          <div className="flex justify-center items-center w-full md:w-1/2 my-16">
             <img
-              className="shadow-2xl md:mr-20 sm:mr-10 xs:mr-6 rounded-3xl sm:w-64 sm:h-64 xs:w-44 xs:h-44 md:w-96 md:h-96"
+              className="shadow-2xl mr-6 sm:mr-10 md:mr-20 rounded-3xl w-full md:w-96 h-auto"
               src={imagem}
               alt=""
-              height="400px"
-              width="450px"
             />
           </div>
         </div>
