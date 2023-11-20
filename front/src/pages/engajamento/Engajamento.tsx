@@ -13,22 +13,34 @@ function Engajamento() {
               Engajamento Comunitário
             </h1>
             <p className="font-roboto text-lg max-w-4xl font-normal text-justify md:pb-28 pb-44  text-white">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-              odit ullam voluptates omnis. Quia ullam necessitatibus quisquam
-              molestiae at facere, reiciendis eum recusandae, vel quasi nulla
-              libero asperiores laboriosam aliquam.Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Delectus odit ullam voluptates
-              omnis. Quia ullam necesitatibus quisquam molestiae at facere,
-              reiciendis eum recusandae, vel quasi nulla libero asperiores
-              laboriosam aliquam.
+              O Centro de Serviço ao Migrante está comprometido em promover um
+              ambiente inclusivo e solidário por meio do engajamento
+              comunitário. Nosso site serve como uma plataforma vital para
+              recrutar novos voluntários que desejam fazer a diferença na vida
+              dos migrantes. Estamos constantemente buscando indivíduos
+              dedicados e apaixonados para se juntarem a nós na organização de
+              eventos, atividades enriquecedoras e confraternizações
+              significativas. Os voluntários desempenham um papel fundamental no
+              suporte aos migrantes, oferecendo orientação, assistência prática
+              e apoio emocional. Através do nosso site, facilitamos a conexão
+              entre membros da comunidade e aqueles que buscam integrar-se à
+              nova sociedade. Além disso, promovemos ativamente esses eventos,
+              compartilhando histórias inspiradoras e destacando o impacto
+              positivo que a comunidade pode ter na vida dos migrantes.
             </p>
           </div>
         </div>
         <div className="flex flex-row justify-center align-middle items-center py-10 md:py-10 xs:px-1 md:px-5">
           <div className="text-center w-5/6 md:4/6 max-w-4xl">
             <div className="flex flex-row overflow-scroll -mt-32 md:overflow-auto items-center align-middle justify-between gap-5">
-              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Coordenadora"} />
-              <PhotoCircle backgroundImage={"./teste.jpg"} text={"Vice-Coordenadora"} />
+              <PhotoCircle
+                backgroundImage={"./teste.jpg"}
+                text={"Coordenadora"}
+              />
+              <PhotoCircle
+                backgroundImage={"./teste.jpg"}
+                text={"Vice-Coordenadora"}
+              />
               <PhotoCircle backgroundImage={"./teste.jpg"} text={"Membro"} />
               <PhotoCircle backgroundImage={"./teste.jpg"} text={"Membro"} />
             </div>
@@ -49,26 +61,25 @@ function Engajamento() {
         <div className="flex flex-row justify-center align-middle items-center py-10 md:py-10 xs:px-1 md:px-5">
           <div className="text-center flex flex-col text-white w-5/6 md:4/6 max-w-4xl">
             <div className="flex flex-col justify-center items-center align-middle">
-            <TeamsCard
-              icon={""}
-              title={"ASSISTÊNCIA PSICO-SOCIAL"}
-              text={""}
-              link={""}
-            />
-            <TeamsCard
-              icon={""}
-              title={"ÁREA EDUCACIONAL"}
-              text={""}
-              link={""}
-            />
-            <TeamsCard 
-              icon={""} 
-              title={"ÁREA JURÍDICA"} 
-              text={""} 
-              link={""} 
-            />
+              <TeamsCard
+                icon={""}
+                title={"ASSISTÊNCIA PSICO-SOCIAL"}
+                text={""}
+                link={""}
+              />
+              <TeamsCard
+                icon={""}
+                title={"ÁREA EDUCACIONAL"}
+                text={""}
+                link={""}
+              />
+              <TeamsCard
+                icon={""}
+                title={"ÁREA JURÍDICA"}
+                text={""}
+                link={""}
+              />
             </div>
-
           </div>
         </div>
       </div>

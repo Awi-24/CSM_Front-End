@@ -57,7 +57,7 @@ function Juridico() {
       </div>
 
       <div className="bg-white py-10 flex flex-col justify-center align-middle items-center">
-        <h1 className="text-4xl md:text-5xl font-medium font-roboto text-start mb-10 text-justify">
+        <h1 className="text-4xl md:text-5xl font-medium font-roboto mb-10 text-justify">
           Atendimento Presencial
         </h1>
         <div className="flex flex-wrap md:justify-around justify-center items-center align-middle m-0 md:m-10">
