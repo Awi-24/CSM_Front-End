@@ -104,7 +104,7 @@ function Landing() {
                 icon={"./svg/bullhorn-solid.svg"}
                 title={"Marketing"}
                 text={
-                  "Área dedicada a divulgação e promocção de nossos eventos, aulas, ações, campanhas, etc. "
+                  "Área dedicada a divulgação e promoção de nossos eventos, aulas, ações, campanhas, etc. "
                 }
                 link={""}
               />
@@ -118,16 +118,8 @@ function Landing() {
               Mapeamento
             </h1>
             <p className="font-roboto font-normal text-gray-900 text-lg w-fit text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
-              blandit, a lacinia ex dignissim. Fusce cursus quam eget sem
-              laoreet, non feugiat dui vestibulum. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed eleifend odio eget vestibulum.
-              Vivamus condimentum ante in mi blandit, a lacinia ex dignissim.
-              Fusce cursus quam eget sem laoreet, non feugiat dui vestibulum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              eleifend odio eget vestibulum. Vivamus condimentum ante in mi
-              blandit, a lacinia ex dignissim.
+            Bem-vindo à nossa plataforma de mapeamento dedicada aos refugiados e migrantes, um espaço onde as histórias de vidas em movimento ganham visibilidade e significado. Aqui, cada ponto no mapa representa uma jornada, uma esperança, e uma narrativa única que desafia fronteiras físicas.
+            O mapeamento de refugiados e migrantes é mais do que apenas coordenadas geográficas; é uma tentativa de dar voz às experiências daqueles que buscam segurança, oportunidades e uma nova vida. Este espaço interativo proporciona uma visão abrangente das dinâmicas globais de deslocamento, permitindo uma compreensão mais profunda das causas subjacentes e das necessidades emergentes.
             </p>
           </div>
         </div>
@@ -138,8 +130,8 @@ function Landing() {
               Parcerias
             </h1>
             <div className="flex flex-col items-center md:flex-row justify-center xs:w-full sm:w-full">
-              <PartnerBox icon={""} title={"ACNUR"} text={""} link={""} />
-              <PartnerBox icon={""} title={"UNIFACS"} text={""} link={""} />
+              <PartnerBox icon={""} title={"ACNUR"} text={"Alto Comissariado das Nações Unidas para os Refugiados (ACNUR), uma organização comprometida em fornecer abrigo, assistência e esperança para milhões de pessoas."} link={""} />
+              <PartnerBox icon={""} title={"UNIFACS"} text={"A UNIFACS é uma das maiores instituições de ensino superior da Bahia e é reconhecida na comunidade principalmente pela sua vocação regional e formação com ênfase nas áreas tecnológicas."} link={""} />
               <PartnerBox icon={""} title={"CATED"} text={""} link={""} />
             </div>
           </div>
