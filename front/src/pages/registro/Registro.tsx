@@ -107,7 +107,7 @@ function Registro() {
 
       // Enviar os dados para a API
       const response = await axios.post(
-        "sua-url-da-api/registro", // Substitua pela URL real da sua API
+        "http://localhost:3000/user",
         {
           nome,
           sobrenome,
