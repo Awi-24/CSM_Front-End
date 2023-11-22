@@ -26,7 +26,8 @@ export default {
         'pattern': "url('./y-so-serious-white.png')",
         'login': "url('./Login.jpg')",
         'psicossocial' : "url('./src/img/psicossocial.png')",
-        'Juridico' : "url('./juridico.png')",      
+        'Juridico' : "url('./juridico.png')",
+        'desenvolvimento': "url('src/img/Laptop.png')",  
       },
       colors: {
       },

@@ -16,10 +16,10 @@ function Desenvolvimento() {
     <div className="bg-landing w-full font-roboto">
       <div>
         {/* Introdução */}
-        <div className="h-full md:h-screen flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-bg-aulas bg-center bg-cover bg-fixed">
-          <div className="text-center md:text-start w-5/6 md:w-4/6 max-w-4xl ">
-            <h1 className="font-roboto font-medium text-blue-300 text-4xl md:text-5xl text-center md:text-start">
-              Desenvolvimento Pessoal
+        <div className="h-full md:h-screen flex flex-row justify-center align-middle items-center py-10 xs:px-2 sm:px-5 md:px-5 bg-desenvolvimento bg-center bg-cover bg-fixed">
+          <div className="flex flex-col justify-center items-center text-center md:text-start w-5/6 md:w-4/6 max-w-4xl ">
+            <h1 className="font-roboto my-10 font-medium text-blue-300 text-4xl md:text-5xl text-center md:text-start">
+              Desenvolvimento 
             </h1>
             <p className="font-roboto font-normal text-white text-lg my-4 text-justify">
               Bem-vindo à nossa área dedicada ao desenvolvimento pessoal e
@@ -86,7 +86,7 @@ function Desenvolvimento() {
                       <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        src="https://www.youtube.com/embed/fJ9rUzIMcZQ?si=kb86JvR_Q1Y04GnI"
                         title="YouTube video"
                         allowFullScreen
                       ></iframe>
@@ -97,7 +97,7 @@ function Desenvolvimento() {
                   return (
                     <div className="bg-bg-aulas bg-center bg-black bg-opacity-50 my-16 border-blue-700 border-2 sm:w-80 md:w-96 h-52 rounded-md text-center w-5/6 flex justify-center items-center align-middle">
                       <a
-                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -117,14 +117,18 @@ function Desenvolvimento() {
                 Sobre Nós
               </h1>
               <p className="font-roboto font-normal text-gray-700 break-normal text-justify">
-                Através deste vídeo envolvente, vamos guiá-lo pelos valores que
-                nos impulsionam, mostrando como nossa abordagem única visa não
-                apenas facilitar a adaptação prática, mas também cultivar uma
-                base sólida para o seu desenvolvimento pessoal. Junte-se a nós
-                enquanto compartilhamos histórias inspiradoras, visões poderosas
-                e o compromisso de construir um futuro cheio de oportunidades.
-                Seja parte da nossa jornada - sua jornada. Estamos aqui para
-                apoiá-lo, capacitá-lo e celebrar cada passo do caminho.
+                O Centro de Serviço ao Migrante é uma organização importante que
+                desempenha um papel fundamental na promoção da migração segura,
+                ordenada e digna no Brasil. O Centro oferece uma ampla gama de
+                serviços e atividades que ajudam migrantes e refugiados a se
+                integrar na sociedade brasileira e a exercer seus direitos. O
+                vídeo abaixo mostra algumas das atividades realizadas pelo
+                Centro de Serviço ao Migrante. No vídeo, vemos migrantes e
+                refugiados participando de cursos de português, oficinas de
+                qualificação profissional, atividades culturais e esportivas e
+                oportunidades de voluntariado. Também vemos migrantes e
+                refugiados recebendo apoio jurídico e orientação sobre seus
+                direitos.
               </p>
             </div>
           </div>

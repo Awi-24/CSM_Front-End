@@ -28,10 +28,10 @@ function Navbar() {
             <Link to="/" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Inicio</Link>
           </li>
           <li>
-            <Link to="/desenvolvimento" className="text-white hvr-grow hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Desenvolvimento</Link>
+            <Link to="/desenvolvimento" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Desenvolvimento</Link>
           </li>
           <li>
-            <Link to="/voluntariado" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Engajamento Comunitário</Link>
+            <Link to="/engajamento" className="text-white hover:text-gray-900 hover:bg-blue-300 px-5 rounded-xl hvr-grow">Engajamento Comunitário</Link>
           </li>
           <li className={`relative hvr-grow ${dropdownOpen ? 'mb-16' : ''}`}>
             <button className="text-white hover:text-gray-900 hover:bg-blue-300 px-4 rounded-xl" onClick={toggleDropdown}>
