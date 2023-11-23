@@ -1,5 +1,4 @@
 import React, { ChangeEvent, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import CustomButton from "../../components/CustomButton";
 import paisesData from "../json/Countries.json";
@@ -16,23 +15,20 @@ interface Genero {
   nome: string;
 }
 
-function Registro() {
-  const [nome, setNome] = useState("");
-  const [sobrenome, setSobrenome] = useState("");
-  const [selectedGenero, setSelectedGenero] = useState<string>("");
-  const [email, setEmail] = useState("");
-  const [ddd, setDDD] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [dataNascimento, setDataNascimento] = useState("");
-  const [senha, setSenha] = useState("");
-  const [selectedPais, setSelectedPais] = useState<string>("");
-  const [emailError, setEmailError] = useState("");
-  const [telefoneError, setTelefoneError] = useState("");
-  const [senhaError, setSenhaError] = useState("");
-  const [paisError, setPaisError] = useState("");
-  const [nomeError, setNomeError] = useState("");
-  const [sobrenomeError, setSobrenomeError] = useState("");
-  const [erroGeral, setErroGeral] = useState("");
+const Registro: React.FC = () => {
+  const [nome, setNome] = useState<string>('');
+  const [sobrenome, setSobrenome] = useState<string>('');
+  const [telefone, setTelefone] = useState<string>('');
+  const [data_nascimento, setDataNascimento] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setSenha] = useState<string>('');
+  const [nacionalidade, setNacionalidade] = useState<string>('');
+  const [genero, setGenero] = useState<string>('');
+  const [erroGeral, setErroGeral] = useState<string | null>(null);
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [telefoneError, setTelefoneError] = useState<string | null>(null);
+  const [senhaError, setSenhaError] = useState<string | null>(null);
+  const [paisError, setPaisError] = useState<string | null>(null);
 
   const paises: Pais[] = paisesData;
 
@@ -47,11 +43,11 @@ function Registro() {
   ];
 
   const handleChangeGenero = (event: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedGenero(event.target.value);
+    setGenero(event.target.value);
   };
 
   const handleChangePais = (event: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedPais(event.target.value);
+    setNacionalidade(event.target.value);
   };
 
   const isValidEmail = (email: string): boolean => {
@@ -62,27 +58,14 @@ function Registro() {
     return /^\d{5}-\d{4}$/.test(telefone);
   };
 
-  const isValidDDD = (ddd: string): boolean => {
-    return /^\d{2}$/.test(ddd);
-  };
-
   const isSenhaValida = (senha: string): boolean => {
     return senha.length >= 8;
   };
 
   const handleRegistro = async () => {
-    // Resetar erros antes de cada validação
-    setEmailError("");
-    setTelefoneError("");
-    setSenhaError("");
-    setPaisError("");
-    setNomeError("");
-    setSobrenomeError("");
-    setErroGeral("");
-
     try {
       // Verificar se os campos estão preenchidos
-      if (!nome || !sobrenome || !selectedGenero || !email || !ddd || !telefone || !dataNascimento || !senha || !selectedPais) {
+      if (!nome || !sobrenome || !genero || !email || !telefone || !data_nascimento || !password || !nacionalidade) {
         setErroGeral("Preencha todos os campos.");
         return;
       }
@@ -94,30 +77,31 @@ function Registro() {
       }
 
       // Verificar o formato do telefone e DDD
-      if (!isValidTelefone(telefone) || !isValidDDD(ddd)) {
+      if (!isValidTelefone(telefone)) {
         setTelefoneError("Telefone ou DDD inválidos.");
         return;
       }
 
       // Verificar a senha
-      if (!isSenhaValida(senha)) {
+      if (!isSenhaValida(password)) {
         setSenhaError("A senha deve ter pelo menos 8 caracteres.");
         return;
       }
 
+      console.log({nome, sobrenome, telefone, email, password, data_nascimento, genero, nacionalidade});
+      
       // Enviar os dados para a API
       const response = await axios.post(
         "http://localhost:3000/user",
         {
           nome,
           sobrenome,
-          genero: selectedGenero,
+          genero,
           email,
-          ddd,
           telefone,
-          dataNascimento,
-          senha,
-          pais: selectedPais,
+          data_nascimento,
+          password,
+          nacionalidade,
         }
       );
 
@@ -150,7 +134,7 @@ function Registro() {
               value={nome}
               onChange={(e) => setNome(e.target.value)}
             />
-            <div className="text-red-500">{nomeError}</div>
+            <div className="text-red-500"></div>
             <input
               type="text"
               name="Sobrenome"
@@ -159,9 +143,9 @@ function Registro() {
               value={sobrenome}
               onChange={(e) => setSobrenome(e.target.value)}
             />
-            <div className="text-red-500">{sobrenomeError}</div>
+            <div className="text-red-500"></div>
             <select
-              value={selectedGenero}
+              value={genero}
               onChange={handleChangeGenero}
               className="m-2 rounded-lg bg-gray-200 hover:text-black border-2 text-gray-800 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80"
             >
@@ -183,14 +167,16 @@ function Registro() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <div className="text-red-500">{emailError}</div>
+            
             <input
-              type="phone"
+              type="ddd"
               name="DDD"
-              placeholder="DDD"
-              className={`m-2 rounded-lg w-16 bg-gray-200 border-2 text-sm border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600`}
-              value={ddd}
-              onChange={(e) => setDDD(e.target.value)}
+              placeholder="DDD (11)"
+              className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
+              /* value={ddd} */
+              /* onChange={(e) => setDDD(e.target.value)} */
             />
+
             <input
               type="phone"
               name="Telefone"
@@ -207,7 +193,7 @@ function Registro() {
               name="Nascimento"
               placeholder="Data de Nascimento (MM/DD/AAAA)"
               className={`m-2 rounded-lg bg-gray-200 border-2 text-gray-800 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
-              value={dataNascimento}
+              value={data_nascimento}
               onChange={(e) => setDataNascimento(e.target.value)}
             />
             <input
@@ -215,12 +201,12 @@ function Registro() {
               name="Senha"
               placeholder="Senha"
               className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
-              value={senha}
+              value={password}
               onChange={(e) => setSenha(e.target.value)}
             />
             <div className="text-red-500">{senhaError}</div>
             <select
-              value={selectedPais}
+              value={nacionalidade}
               onChange={handleChangePais}
               className="m-2 rounded-lg bg-gray-200 hover:text-black border-2 text-gray-800 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80"
             >

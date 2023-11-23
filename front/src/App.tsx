@@ -14,7 +14,7 @@ import Assistencia from './pages/assistencia/Assistencia';
 import Admin from './pages/admin/Admin';
 import Usuario from './pages/usuario/Usuario';
 import psicossocial from './pages/psicossocial/psicossocial';
-
+import FormularioCadastro from './pages/testeAPI/Farinha';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
         <Route path='/conta/admin' Component={Admin}/>   
         <Route path='/conta/usuario' Component={Usuario}/>
         <Route path='/psicossocial' Component={psicossocial}/>
-           
+        <Route path='/teste' Component={FormularioCadastro}/>
       </Routes>
       <Footer />
     </Router>

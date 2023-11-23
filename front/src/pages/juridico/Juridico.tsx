@@ -1,7 +1,9 @@
 import CustomButton from "../../components/CustomButton";
 import Mapa from "../../img/Mapa.png";
+import api from "../../services/api";
 
 import SwiperCard2 from "../../components/Documentos";
+import { useEffect, useState } from "react";
 
 const eventsData = [
   {
@@ -43,7 +45,6 @@ function Juridico() {
           <h1 className="pb-14 font-roboto font-medium text-blue-300 text-4xl md:text-5xl md:text-center">
             Jurídico
           </h1>
-
           <p className="font-roboto text-lg max-w-4xl font-normal text-justify md:pb-28 pb-44  text-white">
             Compreendemos a importância da regularização para os migrantes. Além
             de garantir a conformidade legal, a regularização abre portas para
@@ -138,6 +139,7 @@ function Juridico() {
             comunidades, promovendo a diversidade e a construção de uma
             sociedade mais justa e inclusiva.
           </p>
+          
           <CustomButton
             text={"Saiba Mais"}
             buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
@@ -145,6 +147,7 @@ function Juridico() {
             onClick={() =>
               openLink("http://www.guiadoimigrante.sp.gov.br/#gsc.tab=0")
             }
+            
           />
         </div>
       </div>
