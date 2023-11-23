@@ -18,11 +18,11 @@ const PartnerBox: React.FC<PartnerBoxProps> = ({ icon, title, text, link }) => {
         <img
           src={icon || "https://via.placeholder.com/300"}
           alt="Ícone"
-          className="overflow-clip rounded-t-lg"
+          className="overflow-clip rounded-t-lg h-72 w-full"
         />
       </div>
       <h2 className="font-semibold mb-2 text-xl">{title || "Titulo"}</h2>
-      <p className="text-gray-700 p-4 text-sm">
+      <p className="text-gray-700 p-4 text-sm text-justify">
         {text || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed enim nisl. Textozinho finalzinho. "}
       </p>
     </Link>

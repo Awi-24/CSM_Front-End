@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AulasBox from "../../components/AulasBox";
+import AulaBox from '../../components/admin/AulaBox';
 
 function Aulas() {
   const [filtro, setFiltro] = useState("");
@@ -34,14 +35,21 @@ function Aulas() {
           Aulas Recentes
         </h1>
         <div className="w-full flex flex-wrap justify-center gap-4">
-          {aulasData.map((aula) => (
+{/*           {aulasData.map((aula) => (
             <AulasBox
               key={aula.id}
               title={aula.title}
               turma={aula.turma}
               materia={aula.materia}
             />
-          ))}
+          ))} */}
+          <AulasBox title="Pronomes" turma="PTG231" materia="Gramática" data="32/13/2023" professor="Fulano" />
+          <AulasBox title="Vocabulário I" turma="PTG233" materia="Língua Portuguesa" data="23/12/2023" professor="Beltrano" />
+          <AulasBox title="Vocabulário II" turma="PTG233" materia="Língua Portuguesa" data="23/12/2023" professor="Beltrano" />
+          <AulasBox title="Ortografia" turma="PTG234" materia="Gramática" data="23/12/2023" professor="Doutor Silva" />
+
+
+
         </div>
       </div>
 
@@ -74,6 +82,7 @@ function Aulas() {
                   turma={aula.turma}
                   materia={aula.materia}
                 />
+                
               ))}
             </div>
           )}

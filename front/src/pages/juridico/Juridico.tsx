@@ -5,30 +5,6 @@ import api from "../../services/api";
 import SwiperCard2 from "../../components/Documentos";
 import { useEffect, useState } from "react";
 
-const eventsData = [
-  {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1696446702218-3c68e12da5d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Documento 1",
-    paragraph: "qro saber d prr nhuma",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Documento 2",
-    paragraph: "Descrição do documento",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    title: "Documento 3",
-    paragraph: "Descrição do Evento 3",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-];
-
 const openLink = (url: string): void => {
   window.open(url, "_blank");
 };

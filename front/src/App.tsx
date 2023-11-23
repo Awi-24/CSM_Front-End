@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Desenvolvimento from './pages/desenvolvimento/Desenvolvimento';
 import Landing from './pages/landing/Landing';
-import Voluntariado from './pages/engajamento/Engajamento';
 import Juridico from './pages/juridico/Juridico';
 import Aulas from './pages/desenvolvimento/Aulas';
 import Login from './pages/login/Login';
@@ -14,7 +13,7 @@ import Assistencia from './pages/assistencia/Assistencia';
 import Admin from './pages/admin/Admin';
 import Usuario from './pages/usuario/Usuario';
 import psicossocial from './pages/psicossocial/psicossocial';
-import FormularioCadastro from './pages/testeAPI/Farinha';
+
 
 function App() {
   return (
@@ -26,7 +25,7 @@ function App() {
         <Route path='/' Component={Landing}/>
         <Route path='/desenvolvimento' Component={Desenvolvimento}/>
         <Route path='/engajamento' Component={Engajamento}/>
-        <Route path="/voluntariado" Component ={Voluntariado}/>
+        <Route path="/engajamento" Component ={Engajamento}/>
         <Route path="/juridico" Component={Juridico}/>
         <Route path="/assistencia" Component={Assistencia}/>
         <Route path="/desenvolvimento/aulas" Component={Aulas}/>
@@ -35,7 +34,7 @@ function App() {
         <Route path='/conta/admin' Component={Admin}/>   
         <Route path='/conta/usuario' Component={Usuario}/>
         <Route path='/psicossocial' Component={psicossocial}/>
-        <Route path='/teste' Component={FormularioCadastro}/>
+
       </Routes>
       <Footer />
     </Router>
