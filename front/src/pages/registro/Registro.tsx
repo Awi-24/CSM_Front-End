@@ -167,21 +167,12 @@ const Registro: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <div className="text-red-500">{emailError}</div>
-            
-            <input
-              type="ddd"
-              name="DDD"
-              placeholder="DDD (11)"
-              className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
-              /* value={ddd} */
-              /* onChange={(e) => setDDD(e.target.value)} */
-            />
 
             <input
               type="phone"
               name="Telefone"
-              placeholder="Telefone (00000-0000)"
-              className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-auto`}
+              placeholder="Telefone: (DDD) (xxxxx-xxxx)"
+              className={`m-2 rounded-lg bg-gray-200 border-2 border-gray-200 p-2 focus:border-blue-700 focus:ring-blue-600 w-80 md:w-72`}
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
             />
