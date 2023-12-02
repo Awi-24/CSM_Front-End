@@ -11,7 +11,7 @@ const openLink = (url: string): void => {
 
 function Juridico() {
   function handleClick(): void {
-    throw new Error("Function not implemented.");
+    openLink("https://forms.gle/nix1fAB25ZZswFzs6");
   }
 
   return (
@@ -58,7 +58,7 @@ function Juridico() {
           </p>
           <div className="mb-10">
             <img
-              className="w-96 h-96 rounded-md m-4 md:m-0"
+              className="w-96 h-96 rounded-md m-4 md:m-0 shadow-lg"
               src={Mapa}
               alt="Imagem de um mapa"
             />
@@ -68,7 +68,7 @@ function Juridico() {
           text={"Agendar Suporte"}
           buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
           textClassName=""
-          onClick={() => openLink("")}
+          onClick={() => openLink("https://forms.gle/nix1fAB25ZZswFzs6")}
         />
       </div>
       <div className="flex flex-row w-full h-fit justify-center align-middle items-center my-10 py-10 md:py-5 xs:px-1 md:px-5 text-white">

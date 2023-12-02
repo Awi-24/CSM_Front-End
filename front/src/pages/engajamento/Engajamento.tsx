@@ -46,7 +46,12 @@ function Engajamento() {
             </div>
             <div className="flex flex-row justify-center align-middle items-center">
               <p className="font-roboto pt-20 text-lg font-normal text-justify pb-20  text-white md:mx-10">
-              É com grande entusiasmo que apresentamos a equipe por trás dos bastidores, os arquitetos visionários que dão vida ao nosso projeto com paixão e comprometimento. Cada membro desta equipe traz consigo uma mistura única de talentos, habilidades e experiências, formando um coletivo resiliente focado em alcançar a excelência.
+                É com grande entusiasmo que apresentamos a equipe por trás dos
+                bastidores, os arquitetos visionários que dão vida ao nosso
+                projeto com paixão e comprometimento. Cada membro desta equipe
+                traz consigo uma mistura única de talentos, habilidades e
+                experiências, formando um coletivo resiliente focado em alcançar
+                a excelência.
               </p>
             </div>
           </div>
@@ -57,20 +62,26 @@ function Engajamento() {
               <TeamsCard
                 icon={""}
                 title={"ASSISTÊNCIA PSICOSSOCIAL"}
-                text={"Oferecemos apoio empático e confidencial. Juntos, construímos caminhos para o equilíbrio emocional e bem-estar duradouro."}
-                link={""}
+                text={
+                  "Oferecemos apoio empático e confidencial. Juntos, construímos caminhos para o equilíbrio emocional e bem-estar duradouro."
+                }
+                link={"../psicossocial"}
               />
               <TeamsCard
                 icon={""}
                 title={"ÁREA EDUCACIONAL"}
-                text={"Educação transformadora, inspirada pela inovação. Mentes curiosas para crescimento e desenvolvimento pessoal excepcionais."}
-                link={""}
+                text={
+                  "Educação transformadora, inspirada pela inovação. Mentes curiosas para crescimento e desenvolvimento pessoal excepcionais."
+                }
+                link={"../desenvolvimento/aulas"}
               />
               <TeamsCard
                 icon={""}
                 title={"ÁREA JURÍDICA"}
-                text={"Onde a justiça é mais do que uma aspiração, é a base sobre a qual construímos solidez, equidade e proteção para os direitos."}
-                link={""}
+                text={
+                  "Onde a justiça é mais do que uma aspiração, é a base sobre a qual construímos solidez, equidade e proteção para os direitos."
+                }
+                link={"../juridico"}
               />
             </div>
           </div>
@@ -86,18 +97,19 @@ function Engajamento() {
 
             <div className="font-robot font-normal text-lg my-10 text-justify">
               {" "}
-              Una-se à nossa causa! Juntos podemos embarcar nessa jornada de impacto social,
-              fazemos a diferença, influenciando vidas
-               e construindo um mundo mais solidário e inclusivo.
-               Seja parte da mudança, dedicando seu tempo e habilidades para causas significativas.
+              Una-se à nossa causa! Juntos podemos embarcar nessa jornada de
+              impacto social, fazemos a diferença, influenciando vidas e
+              construindo um mundo mais solidário e inclusivo. Seja parte da
+              mudança, dedicando seu tempo e habilidades para causas
+              significativas.
             </div>
           </div>
           <CustomButton
             text={"Formulário"}
             buttonClassName="bg-blue-700 text-white hover:bg-blue-500 font-roboto font-medium"
             textClassName=""
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
+            onClick={() => {
+              window.location.href = "https://forms.gle/PLofWY4Jic3hipQ96", "_blank";
             }}
           />
         </div>

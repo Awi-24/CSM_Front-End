@@ -9,8 +9,9 @@ import MateriaisIMG from "../../img/Materiais.png";
 
 function Desenvolvimento() {
   function handleClick(): void {
-    throw new Error("Function not implemented.");
+    window.location.href = "https://forms.gle/XY8f7Tn1xBiP7EiW6";
   }
+  
 
   return (
     <div className="bg-landing w-full font-roboto">
@@ -54,7 +55,7 @@ function Desenvolvimento() {
               text={
                 "Nosso formulário de Incrição, para receber nossos avisos sobre novas turmas/grupos de aprendizagem."
               }
-              link={""}
+              link={"https://forms.gle/rc52Y3CZ8GS5Pntr7"}
             />
             <PartnerBox
               icon={AulasIMG}
@@ -62,7 +63,7 @@ function Desenvolvimento() {
               text={
                 "Aqui você pode acessar as aulas gravadas mais recentes, de qualquer assunto ou turma. Não precisa logar."
               }
-              link={"./Aulas"}
+              link={"desenvolvimento/Aulas"}
             />
             <PartnerBox
               icon={MateriaisIMG}
@@ -70,7 +71,7 @@ function Desenvolvimento() {
               text={
                 "Aqui você pode consultar materiais extras, para agregar nos seus novos conhecimentos e praticar melhor."
               }
-              link={""}
+              link={"/desenvolvimento/Aulas"}
             />
           </div>
         </div>
